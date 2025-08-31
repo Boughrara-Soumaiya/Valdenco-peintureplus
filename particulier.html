@@ -178,37 +178,36 @@
 <p>Expliquez votre besoin : nous revenons vers vous sous 24–48 h ouvrées.</p>
 </div>
 <div class="two">
-<form id="contactForm" class="panel reveal" novalidate>
-<div>
-<label for="nom">Nom</label>
-<input id="nom" name="nom" autocomplete="name" required />
-</div>
-<div>
-<label for="email">Email</label>
-<input id="email" name="email" type="email" autocomplete="email" required />
-</div>
-<div>
-<label for="tel">Téléphone</label>
-<input id="tel" name="tel" type="tel" autocomplete="tel" />
-</div>
-<div>
-<label for="sujet">Sujet</label>
-<select id="sujet" name="sujet" required>
-<option value="">Choisir…</option>
-<option>Demande de devis</option>
-<option>Information technique</option>
-<option>Location de matériel</option>
-<option>Autre</option>
-</select>
-</div>
-<div class="full">
-<label for="message">Message</label>
-<textarea id="message" name="message" required placeholder="Décrivez brièvement le site, l’état du support, la surface, les contraintes…"></textarea>
-</div>
-<div class="full">
-<button class="btn primary" type="submit">Envoyer</button>
-<p id="formNote" class="small" role="status" style="margin-top:8px;" aria-live="polite"></p>
-</div>
+<form id="contactForm" class="panel reveal" action="contact.php" method="POST">
+  <div>
+    <label for="nom">Nom</label>
+    <input id="nom" name="nom" autocomplete="name" required />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+  </div>
+  <div>
+    <label for="tel">Téléphone</label>
+    <input id="tel" name="tel" type="tel" autocomplete="tel" />
+  </div>
+  <div>
+    <label for="sujet">Sujet</label>
+    <select id="sujet" name="sujet" required>
+      <option value="">Choisir…</option>
+      <option>Demande de devis</option>
+      <option>Information technique</option>
+      <option>Location de matériel</option>
+      <option>Autre</option>
+    </select>
+  </div>
+  <div class="full">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Décrivez votre besoin pour que nous puissions vous répondre efficacement"></textarea>
+  </div>
+  <div class="full">
+    <button class="btn primary" type="submit">Envoyer</button>
+  </div>
 </form>
 </section>
 </main>
@@ -222,40 +221,19 @@
 "description": "Spécialiste en peintures industrielles, résines de sol époxy, anticorrosion et marquage.",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "50 avenue du Général de Gaulle",
-"addressLocality": "Forbach",
-"postalCode": "57600",
+"streetAddress": "8 Rue de la Forêt",
+"addressLocality": "Maxstadt"",
+"postalCode": "57660",
 "addressCountry": "FR"
 },
-"telephone": "+33300000000",
-"email": "contact@valdenco-peintureplus.com",
+"telephone": "+330637351566",
+"email": "sboughrara.860@gmail.com",
 "url": "https://valdenco-peintureplus.com/",
 "areaServed": "France",
 "image": [
 "https://images.unsplash.com/photo-1577413575390-1a28a2c07da9?q=80&w=1200&auto=format&fit=crop"
 ]
 }
-</script>
-<script>
-// Formulaire (validation côté client)
-const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
-form?.addEventListener('submit', (e) => {
-e.preventDefault();
-const data = new FormData(form);
-const entries = Object.fromEntries(data.entries());
-// Validation simple
-if (!entries.nom || !entries.email || !entries.sujet || !entries.message) {
-note.textContent = 'Veuillez compléter les champs requis.';
-note.style.color = '#f59e0b';
-return;
-}
-// Ici, brancher un service d’emailing ou backend (fetch)
-note.textContent = 'Merci ! Votre message a été envoyé. Nous revenons vers vous rapidement.';
-note.style.color = '#22c55e';
-form.reset();
-});
-
 </script>
 <!-- Footer -->
 <footer>

@@ -81,7 +81,7 @@
 <section class="home">
   <div class="home-content">
     <div class="home-left">
-      <p class="subtitle">PROTECTION DE SURFACE • RÉSINES DE SOL</p>
+      <p class="subtitle">PROTECTION DE SURFACE • RÉSINE DE SOL</p>
       <h1>Des sols industriels durables & des protections anticorrosion sur-mesure.</h1>
       <p class="description">
         Nous réalisons la préparation des supports, l’application de résines époxy, 
@@ -104,7 +104,7 @@
 <section class="vp-section">
   <!-- Texte à gauche centré -->
   <div class="vp-text-column">
-    <p class="vp-subtitle">Garantie & certifications : la sécurité d’un choix durable</p>
+    <p class="vp-subtitle">Garanties & certifications : la sécurité d’un choix durable</p>
     <h2 class="vp-title">Pourquoi choisir <span>Valdenco-Peintureplus</span> ?</h2>
     <p class="vp-intro">
       Depuis 1993, nous accompagnons les entreprises qui recherchent des solutions fiables, solides et sûres. 
@@ -247,18 +247,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <div class="partners-carousel">
     <div class="carousel-track">
-    <div class="partner"><img src="Partenaire/vinci.png" alt="Partenaire 1"></div>
-    <div class="partner"><img src="Partenaire/dalkia.png" alt="Partenaire 2"></div>
-    <div class="partner"><img src="Partenaire/metz.png" alt="Partenaire 3"></div>
-    <div class="partner"><img src="Partenaire/mm.png" alt="Partenaire 4"></div>
-    <div class="partner"><img src="Partenaire/edf.png" alt="Partenaire 5"></div>
-    <div class="partner"><img src="Partenaire/enedis.png" alt="Partenaire 6"></div>
-    <div class="partner"><img src="Partenaire/rte.png" alt="Partenaire 7"></div>
-    <div class="partner"><img src="Partenaire/RGB_VEOLIA_HD.png" alt="Partenaire 8"></div>
-    <div class="partner"><img src="Partenaire/eiffage.png" alt="Partenaire 9"></div>
-    <div class="partner"><img src="Partenaire/uem.png" alt="Partenaire 10"></div>
-    <div class="partner"><img src="Partenaire/metz.png" alt="Partenaire 3"></div>
-    <div class="partner"><img src="Partenaire/mm.png" alt="Partenaire 4"></div>
+    <div class="partner"><img src="Partenaire/Logo_Vinci.png" alt="Partenaire 1"></div>
+    <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Partenaire 2"></div>
+    <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Partenaire 3"></div>
+    <div class="partner"><img src="Partenaire/RTE_logo.png" alt="Partenaire 4"></div>
+    <div class="partner"><img src="Partenaire/Logo_de_Montigny-lès-Metz.png" alt="Partenaire 5"></div>
+    <div class="partner"><img src="Partenaire/logo edf.png" alt="Partenaire 6"></div>
+    <div class="partner"><img src="Partenaire/RTE_logo.png" alt="Partenaire 7"></div>
+    <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Partenaire 8"></div>
+    <div class="partner"><img src="Partenaire/Logo_enedis.png" alt="Partenaire 9"></div>
+    <div class="partner"><img src="Partenaire/eiffage-logo-1.jpg" alt="Partenaire 10"></div>
+    <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Partenaire 3"></div>
+    <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Partenaire 4"></div>
   </div>
   </div>
 </section>
@@ -271,37 +271,36 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>Expliquez votre besoin : nous revenons vers vous sous 24–48 h ouvrées.</p>
 </div>
 <div class="two">
-<form id="contactForm" class="panel reveal" novalidate>
-<div>
-<label for="nom">Nom</label>
-<input id="nom" name="nom" autocomplete="name" required />
-</div>
-<div>
-<label for="email">Email</label>
-<input id="email" name="email" type="email" autocomplete="email" required />
-</div>
-<div>
-<label for="tel">Téléphone</label>
-<input id="tel" name="tel" type="tel" autocomplete="tel" />
-</div>
-<div>
-<label for="sujet">Sujet</label>
-<select id="sujet" name="sujet" required>
-<option value="">Choisir…</option>
-<option>Demande de devis</option>
-<option>Information technique</option>
-<option>Location de matériel</option>
-<option>Autre</option>
-</select>
-</div>
-<div class="full">
-<label for="message">Message</label>
-<textarea id="message" name="message" required placeholder="Décrivez brièvement le site, l’état du support, la surface, les contraintes…"></textarea>
-</div>
-<div class="full">
-<button class="btn primary" type="submit">Envoyer</button>
-<p id="formNote" class="small" role="status" style="margin-top:8px;" aria-live="polite"></p>
-</div>
+<form id="contactForm" class="panel reveal" action="contact.php" method="POST">
+  <div>
+    <label for="nom">Nom</label>
+    <input id="nom" name="nom" autocomplete="name" required />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+  </div>
+  <div>
+    <label for="tel">Téléphone</label>
+    <input id="tel" name="tel" type="tel" autocomplete="tel" />
+  </div>
+  <div>
+    <label for="sujet">Sujet</label>
+    <select id="sujet" name="sujet" required>
+      <option value="">Choisir…</option>
+      <option>Demande de devis</option>
+      <option>Information technique</option>
+      <option>Location de matériel</option>
+      <option>Autre</option>
+    </select>
+  </div>
+  <div class="full">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Décrivez votre besoin pour que nous puissions vous répondre efficacement"></textarea>
+  </div>
+  <div class="full">
+    <button class="btn primary" type="submit">Envoyer</button>
+  </div>
 </form>
 </section>
 </main>
@@ -315,40 +314,19 @@ document.addEventListener('DOMContentLoaded', () => {
 "description": "Spécialiste en peintures industrielles, résines de sol époxy, anticorrosion et marquage.",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "50 avenue du Général de Gaulle",
-"addressLocality": "Forbach",
-"postalCode": "57600",
+"streetAddress": "8 Rue de la Forêt",
+"addressLocality": "Maxstadt"",
+"postalCode": "57660",
 "addressCountry": "FR"
 },
-"telephone": "+33300000000",
-"email": "contact@valdenco-peintureplus.com",
+"telephone": "+330637351566",
+"email": "sboughrara.860@gmail.com",
 "url": "https://valdenco-peintureplus.com/",
 "areaServed": "France",
 "image": [
 "https://images.unsplash.com/photo-1577413575390-1a28a2c07da9?q=80&w=1200&auto=format&fit=crop"
 ]
 }
-</script>
-<script>
-// Formulaire (validation côté client)
-const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
-form?.addEventListener('submit', (e) => {
-e.preventDefault();
-const data = new FormData(form);
-const entries = Object.fromEntries(data.entries());
-// Validation simple
-if (!entries.nom || !entries.email || !entries.sujet || !entries.message) {
-note.textContent = 'Veuillez compléter les champs requis.';
-note.style.color = '#f59e0b';
-return;
-}
-// Ici, brancher un service d’emailing ou backend (fetch)
-note.textContent = 'Merci ! Votre message a été envoyé. Nous revenons vers vous rapidement.';
-note.style.color = '#22c55e';
-form.reset();
-});
-
 </script>
 <!-- Footer -->
 <footer>

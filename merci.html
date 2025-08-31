@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Merci pour votre message</title>
+  <style>
+    :root {
+      --primary: #12598C;
+      --secondary: #6EA1C4;
+      --black: #000000;
+      --gray: #C2C2C2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      color: var(--black);
+      padding: 3rem 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 2rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--secondary);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>✅ Merci pour votre message</h2>
+    <p>Nous avons bien reçu votre demande.  
+    Notre équipe vous répondra sous 24 à 48h ouvrées.</p>
+    <a href="index.html" class="btn">Retour à l’accueil</a>
+  </div>
+</body>
+</html>
