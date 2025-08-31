@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
+<meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
+<meta name="theme-color" content="#0f766e" />
+<link rel="icon" href="logo/logomark 1.png" />
+<link rel="stylesheet" href="nostravaux.css" />
+
+
+<!-- Librairies (ordre important : jQuery → Turn.js → PDF.js) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<style>
+:root {
+  --w: 800px;
+  --h: 600px;
+}
+
+.wrap {
+    margin-top: 100px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+#flipbook {
+  width: var(--w);
+  height: var(--h);
+  display: none;
+}
+
+#flipbook .page {
+  width: var(--w);
+  height: var(--h);
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+#flipbook .page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+#flipbook .page.empty {
+  background: #f8f8f8;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem 1rem;
+  background: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  font-size: .95rem;
+}
+
+.controls {
+  display: flex; gap: .6rem; align-items: center; justify-content: center;
+}
+
+.btn {
+  border: 0; padding: .6rem .9rem; border-radius: .6rem; cursor: pointer;
+  background: #111; color: #fff; font-weight: 600;
+}
+
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.hint { font-size: .9rem; color: #555; }
+
+a.fallback { color: #0a58ca; text-decoration: none; }
+</style>
+</head>
+<body>
+    <!-- == HEADER ==-->
+ <header>
+  <!-- Logo Desktop -->
+  <a href="index.html" class="logo-link">
+    <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
+  </a>
+
+  <!-- Logo Mobile -->
+  <a href="index.html" class="logo-link">
+    <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
+  </a>
+  <!-- Burger -->
+  <div class="burger" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="particulier.html">Particulier</a>
+          <a href="Entreprise.html">Entreprise</a>
+          <a href="Marchépublic.html">Marché public</a>
+        </div>
+      </li>
+      <li><a href="#realisations">Nos travaux</a></li>
+      <li><a href="partenaire.html">Partenaires</a></li>
+      <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
+    </ul>
+  </nav>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element" class="translate-widget"></div>
+</header>
+
+<!-- Script menu burger -->
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  if (burger) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
+</script>
+
+<!-- Script Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,de',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Contenu flipbook -->
+<div class="wrap">
+  <div id="status" class="status">
+    <div class="spinner" aria-hidden="true" style="width:18px;height:18px;border:3px solid #ddd;border-top-color:#666;border-radius:50%;animation:spin 1s linear infinite;margin-right:.6rem"></div>
+    <span>Chargement de l’album…</span>
+  </div>
+
+  <div id="flipbook" aria-label="Album PDF en flipbook"></div>
+
+  <div class="controls">
+    <button id="prev" class="btn" disabled>◀ Page précédente</button>
+    <button id="next" class="btn" disabled>Page suivante ▶</button>
+  </div>
+
+  <div class="hint">Astuce : utilisez aussi les flèches ◀ ▶ du clavier. Si rien ne s’affiche, <a class="fallback" href="album.pdf" target="_blank">ouvrez directement le PDF</a>.</div>
+</div>
+
+<script>
+/* === Configuration PDF.js worker (même version que pdf.min.js) === */
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+/* === Nom du PDF (respecte la casse exacte du fichier sur le serveur) === */
+const PDF_URL = 'album.pdf';
+
+/* Execute au chargement complet de la page pour être sûr que tout est présent */
+window.addEventListener('load', () => {
+  renderPdfToFlipbook(PDF_URL);
+});
+
+async function renderPdfToFlipbook(pdfUrl) {
+  const status = document.getElementById('status');
+  const flipbook = $('#flipbook');
+
+  try {
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+    const pdf = await loadingTask.promise;
+
+    const renderedPages = []; // tableau temporaire pour contrôler l'ordre
+
+    // Rend chaque page en image et stocke HTML dans renderedPages[]
+    for (let p = 1; p <= pdf.numPages; p++) {
+      const page = await pdf.getPage(p);
+      const vp1 = page.getViewport({ scale: 1 });
+      const targetHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--h')) || 600;
+      const scale = (targetHeight / vp1.height) * 2; // facteur pour netteté
+      const v = page.getViewport({ scale });
+
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = Math.floor(v.width);
+      canvas.height = Math.floor(v.height);
+
+      await page.render({ canvasContext: ctx, viewport: v }).promise;
+      const dataURL = canvas.toDataURL('image/jpeg', 0.92);
+
+      renderedPages.push(`<div class="page"><img src="${dataURL}" alt="Page ${p}"></div>`);
+    }
+
+    // === Construction dans l'ordre attendu par Turn.js ===
+    // couverture (1)
+    if (renderedPages.length > 0) flipbook.append(renderedPages[0]);
+
+    // pages intérieures (2 .. n-1)
+    for (let i = 1; i < renderedPages.length - 1; i++) {
+      flipbook.append(renderedPages[i]);
+    }
+
+    // dos de couverture (n)
+    if (renderedPages.length > 1) flipbook.append(renderedPages[renderedPages.length - 1]);
+
+    // Si tu veux assurer un nombre pair de faces (optionnel), tu peux décommenter :
+    // if ((renderedPages.length) % 2 !== 0) { flipbook.append('<div class="page empty"></div>'); }
+
+    // Initialise Turn.js
+    flipbook.turn({
+      width: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--w')) || 800,
+      height: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--h')) || 600,
+      autoCenter: true,
+      gradients: true,
+      elevation: 50
+    });
+
+    // Affichage & contrôles
+    status.style.display = 'none';
+    flipbook.show();
+    $('#prev').prop('disabled', false).on('click', () => flipbook.turn('previous'));
+    $('#next').prop('disabled', false).on('click', () => flipbook.turn('next'));
+
+    $(document).on('keydown', (e) => {
+      if (e.key === 'ArrowLeft') flipbook.turn('previous');
+      if (e.key === 'ArrowRight') flipbook.turn('next');
+    });
+
+  } catch (err) {
+    console.error('Erreur chargement PDF:', err);
+    // Message utile pour l'utilisateur
+    const msg = (err && err.message) ? err.message : 'Échec du chargement du PDF.';
+    status.querySelector('span').textContent = "Échec du chargement : " + msg;
+  }
+}
+</script>
+
+</body>
+</html>
