@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
+<meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
+<meta name="theme-color" content="#0f766e" />
+<link rel="icon" href="logo/logomark 1.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- == HEADER ==-->
+ <header>
+  <!-- Logo Desktop -->
+  <a href="index.html" class="logo-link">
+    <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
+  </a>
+
+  <!-- Logo Mobile -->
+  <a href="index.html" class="logo-link">
+    <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
+  </a>
+  <!-- Burger -->
+  <div class="burger" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="particulier.html">Particulier</a>
+          <a href="Entreprise.html">Entreprise</a>
+          <a href="Marchépublic.html">Marché public</a>
+        </div>
+      </li>
+      <li><a href="#realisations">Nos travaux</a></li>
+      <li><a href="#">Partenaires</a></li>
+      <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
+    </ul>
+  </nav>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element" class="translate-widget"></div>
+</header>
+
+<!-- Script menu burger-->
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+
+<!-- Script Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,de',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+  
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+
+<!-- HOME -->
+  <section class="home">
+    <h1>Nos Partenaires</h1>
+    <p>Découvrez les collaborations qui nous permettent d’avancer et d’innover chaque jour.</p>
+  </section>
+
+  <!-- POURQUOI DEVENIR PARTENAIRE -->
+  <section class="why-partner">
+    <h2>Pourquoi devenir partenaire ?</h2>
+    <p>
+      Rejoindre notre réseau de partenaires, c’est bénéficier d’une visibilité accrue, d’opportunités de collaborations
+      uniques et d’un soutien dans vos projets. Ensemble, nous pouvons créer des synergies et développer des solutions innovantes pour nos clients.
+    </p>
+  </section>
+
+  <!-- NOS PARTENAIRES -->
+  <section class="partners">
+    <h2>Nos Partenaires Actuels</h2>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <img src="https://picsum.photos/120/80?random=1" alt="Partenaire 1">
+        <p>Partenaire 1 - Secteur construction</p>
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/120/80?random=2" alt="Partenaire 2">
+        <p>Partenaire 2 - Secteur immobilier</p>
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/120/80?random=3" alt="Partenaire 3">
+        <p>Partenaire 3 - Secteur design</p>
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/120/80?random=4" alt="Partenaire 4">
+        <p>Partenaire 4 - Secteur énergétique</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact -->
+<section id="contact" class="container">
+<div class="section-head">
+<h2>Nous contacter</h2>
+<p>Expliquez votre besoin : nous revenons vers vous sous 24–48 h ouvrées.</p>
+</div>
+<div class="two">
+<form id="contactForm" class="panel reveal" novalidate>
+<div>
+<label for="nom">Nom</label>
+<input id="nom" name="nom" autocomplete="name" required />
+</div>
+<div>
+<label for="email">Email</label>
+<input id="email" name="email" type="email" autocomplete="email" required />
+</div>
+<div>
+<label for="tel">Téléphone</label>
+<input id="tel" name="tel" type="tel" autocomplete="tel" />
+</div>
+<div>
+<label for="sujet">Sujet</label>
+<select id="sujet" name="sujet" required>
+<option value="">Choisir…</option>
+<option>Demande de devis</option>
+<option>Information technique</option>
+<option>Location de matériel</option>
+<option>Autre</option>
+</select>
+</div>
+<div class="full">
+<label for="message">Message</label>
+<textarea id="message" name="message" required placeholder="Décrivez brièvement le site, l’état du support, la surface, les contraintes…"></textarea>
+</div>
+<div class="full">
+<button class="btn primary" type="submit">Envoyer</button>
+<p id="formNote" class="small" role="status" style="margin-top:8px;" aria-live="polite"></p>
+</div>
+</form>
+</section>
+</main>
+
+<!-- JSON‑LD -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "ValdenCo – Peinture Plus",
+"description": "Spécialiste en peintures industrielles, résines de sol époxy, anticorrosion et marquage.",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "50 avenue du Général de Gaulle",
+"addressLocality": "Forbach",
+"postalCode": "57600",
+"addressCountry": "FR"
+},
+"telephone": "+33300000000",
+"email": "contact@valdenco-peintureplus.com",
+"url": "https://valdenco-peintureplus.com/",
+"areaServed": "France",
+"image": [
+"https://images.unsplash.com/photo-1577413575390-1a28a2c07da9?q=80&w=1200&auto=format&fit=crop"
+]
+}
+</script>
+<script>
+// Formulaire (validation côté client)
+const form = document.getElementById('contactForm');
+const note = document.getElementById('formNote');
+form?.addEventListener('submit', (e) => {
+e.preventDefault();
+const data = new FormData(form);
+const entries = Object.fromEntries(data.entries());
+// Validation simple
+if (!entries.nom || !entries.email || !entries.sujet || !entries.message) {
+note.textContent = 'Veuillez compléter les champs requis.';
+note.style.color = '#f59e0b';
+return;
+}
+// Ici, brancher un service d’emailing ou backend (fetch)
+note.textContent = 'Merci ! Votre message a été envoyé. Nous revenons vers vous rapidement.';
+note.style.color = '#22c55e';
+form.reset();
+});
+
+</script>
+<!-- Footer -->
+<footer>
+<div class="container footer-grid">
+<div>
+<div class="brand" style="margin: 12px 0 6px;">
+<span class="logo" aria-hidden="true">
+</span>
+<span>ValdenCo – Peinture Plus</span>
+</div>
+<p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
+</div>
+<div>
+<h4>Navigation</h4>
+<p class="small">
+  <a href="#services">Services</a>
+  <br><a href="#realisations">Réalisations</a>
+  <br><a href="#partenaires">Partenaires</a>
+  <br><a href="#contact">Contact</a></p>
+</div>
+<div>
+<h4>Réseaux</h4>
+<p class="small"><a href="#">LinkedIn</a><br><a href="#">Facebook</a></p>
+</div>
+</div>
+<div class="container footnote">
+© <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
+</div>
+</footer>
