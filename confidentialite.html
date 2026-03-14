@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
+<meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
+<meta name="theme-color" content="#0f766e" />
+<link rel="icon" href="logo/logomark 1.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- == HEADER ==-->
+ <header>
+  <!-- Logo Desktop -->
+  <a href="index.html" class="logo-link">
+    <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
+  </a>
+
+  <!-- Logo Mobile -->
+  <a href="index.html" class="logo-link">
+    <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
+  </a>
+  <!-- Burger -->
+  <div class="burger" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="Entreprise.html">Entreprise</a>
+          <a href="Marchépublic.html">Marché public</a>
+          <a href="particulier.html">Particulier</a>
+        </div>
+      </li>
+      <li><a href="nostravaux.html">Nos travaux</a></li>
+      <li><a href="partenaire.html">Partenaires</a></li>
+      <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
+    </ul>
+  </nav>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element" class="translate-widget"></div>
+</header>
+
+<!-- Script menu burger-->
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+
+<!-- Script Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,de',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+  
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+<body>
+    <main class="legal-page-content">
+    <div class="legal-page-container">
+        <h1>Politique de <span>Confidentialité</span></h1>
+        <p class="legal-intro">ValdenCo – Peinture Plus s'engage à ce que la collecte et le traitement de vos données soient conformes au RGPD et à la Loi Informatique et Libertés.</p>
+
+        <section class="legal-section">
+            <h2>1. Responsable de Traitement</h2>
+            <div class="legal-card">
+                <p>Le responsable du traitement des données est la société <strong>ValdenCo – Peinture Plus</strong>, située au 8 Rue de la Forêt, 57660 Maxstadt.</p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h2>2. Tableau des Traitements</h2>
+            <div class="legal-card" style="overflow-x: auto;">
+                <table class="privacy-table">
+                    <thead>
+                        <tr>
+                            <th>Finalité</th>
+                            <th>Données</th>
+                            <th>Base légale</th>
+                            <th>Conservation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Demandes de contact</td>
+                            <td>Nom, Email, Tel</td>
+                            <td>Intérêt légitime</td>
+                            <td>Temps du traitement</td>
+                        </tr>
+                        <tr>
+                            <td>Devis et Facturation</td>
+                            <td>Infos pro, Adresse</td>
+                            <td>Pré-contractuel</td>
+                            <td>10 ans (Légal)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h2>3. Vos Droits</h2>
+            <div class="legal-card">
+                <p>Vous disposez des droits suivants concernant vos données personnelles :</p>
+                <ul class="legal-list">
+                    <li><strong>Droit d'accès :</strong> Consulter les données que nous détenons.</li>
+                    <li><strong>Droit de rectification :</strong> Modifier des informations inexactes.</li>
+                    <li><strong>Droit à l'effacement :</strong> Demander la suppression définitive.</li>
+                    <li><strong>Droit d'opposition :</strong> Refuser un traitement pour motif légitime.</li>
+                </ul>
+                <p style="margin-top:20px;">Contact pour exercer vos droits : <a href="mailto:peintureplus@ymail.com" style="color:var(--primary); font-weight:bold;">peintureplus@ymail.com</a></p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h2>4. Sécurité des données</h2>
+            <div class="legal-card">
+                <p>Nous utilisons des protocoles de sécurité (SSL/HTTPS) pour protéger vos informations contre tout accès non autorisé lors de leur transmission via notre formulaire.</p>
+            </div>
+        </section>
+
+        <p class="last-update">Dernière mise à jour : Mars 2026</p>
+    </div>
+    </body>
+    </main>
+    <style>
+  /* On cible uniquement le corps des pages spécifiques */
+  .legal-page-content { 
+    font-family: var(--font-body); 
+    line-height: 1.6; 
+    color: #333; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 140px 20px 60px; /* Padding haut pour laisser passer le header fixe */
+  }
+
+  .legal-page-content h1 { 
+    font-family: var(--font-titles);
+    color: var(--primary); 
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--secondary);
+    display: inline-block;
+  }
+
+  .legal-page-content h2 { 
+    font-family: var(--font-titles);
+    color: var(--primary); 
+    margin-top: 35px; 
+    margin-bottom: 15px;
+    border-left: 5px solid var(--secondary); 
+    padding-left: 15px; 
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  /* Style des tableaux sans affecter d'autres éléments */
+  .legal-page-content table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 0.9rem; 
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .legal-page-content th { 
+    background: var(--primary); 
+    color: white; 
+    padding: 12px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .legal-page-content td { 
+    border: 1px solid #e0e6ed; 
+    padding: 12px; 
+  }
+
+  /* Style des accordéons FAQ */
+  .legal-page-content details {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .legal-page-content summary {
+    padding: 15px;
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+    list-style: none;
+  }
+  .last-update {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+</style>
+<!-- Footer -->
+<footer>
+<div class="container footer-grid">
+<div>
+<div class="brand" style="margin: 12px 0 6px;">
+<span class="logo" aria-hidden="true">
+</span>
+<span>ValdenCo – Peinture Plus</span>
+</div>
+<p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
+</div>
+<div>
+<p class="small">
+        <h4>Coordonnées</h4>
+        <p><strong>ValdenCo Peinture Plus</strong></p>
+        <address style="font-style: normal; margin-bottom: 20px;">
+            8 Rue de la Forêt<br>
+            57660 Maxstadt
+        </address>
+        <p><strong>Téléphone :</strong> 06 98 79 10 23</p>
+        <p><strong>Email :</strong> peintureplus@ymail.com</p>
+  </p>
+</div>
+<div>
+<h4>Navigation</h4>
+<p class="small">
+  <a href="#services">Services</a>
+  <br><a href="#realisations">Réalisations</a>
+  <br><a href="#partenaires">Partenaires</a>
+  <br><a href="#contact">Contact</a></p>
+</div>
+<div>
+    <h4>Juridique</h4>
+    <p class="small">
+      <a href="FAQ.html">Questions Fréquentes (FAQ)</a><br>
+      <a href="mentions-legales.html">Mentions Légales</a><br>
+      <a href="confidentialite.html">Confidentialité (RGPD)</a>
+      <a href="cgv.html">Conditions Générales de Vente</a>
+    </p>
+  </div>
+<div>
+<h4>Réseaux</h4>
+<p class="small"><a href="#">LinkedIn</a><br><a href="#">Facebook</a></p>
+</div>
+</div>
+<div class="container footnote">
+© <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
+</div>
+</footer>
+</html>
