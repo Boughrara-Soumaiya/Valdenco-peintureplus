@@ -647,17 +647,19 @@ li:hover .dropdown-content {
 }
 
 /* === COULEURS DES CONTOURS ET SURVOL === */
-
 /* Particulier (Secondary) */
-.step.particulier .circle { border-color: var(--secondary); h3 { color: var(--secondary); } }
+.step.particulier .circle { border-color: var(--secondary); }
+.step.particulier .circle h3 { color: var(--secondary); }
 .step.particulier:hover .circle { background-color: var(--secondary); }
 
 /* Entreprise (Gray) */
-.step.entreprise .circle { border-color: var(--gray); h3 { color: #888; } }
+.step.entreprise .circle { border-color: var(--gray); }
+.step.entreprise .circle h3 { color: #888; }
 .step.entreprise:hover .circle { background-color: var(--gray); }
 
 /* Marché Public (Primary) */
-.step.mp .circle { border-color: var(--primary); h3 { color: var(--primary); } }
+.step.mp .circle { border-color: var(--primary); }
+.step.mp .circle h3 { color: var(--primary); }
 .step.mp:hover .circle { background-color: var(--primary); }
 
 /* Inversion des textes au survol */
