@@ -571,6 +571,9 @@ li:hover .dropdown-content {
 }
 
 @media (max-width: 576px) {
+  .vp-badges-container {
+    grid-template-columns: 1fr 1fr 1fr; /* 2 badges par ligne sur très petit écran */
+  }
   .vp-section { padding: 25px; gap: 25px; }
   .vp-card { padding: 15px; }
   .vp-card h3 { font-size: 14px; }
