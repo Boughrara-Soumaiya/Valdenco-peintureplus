@@ -297,109 +297,110 @@ li:hover .dropdown-content {
 
 /* Home Section */
 #home {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  text-align: center;
-  padding: 6rem 1.5rem;
+    margin-top: 80px;
+    background: var(--primary); /* Couleur pleine = Solidité */
+    color: white;
+    padding: 80px 10%;
+    text-align: left;
+    border-radius: 0; /* On enlève les arrondis */
 }
 
 #home h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-#home p {
-  font-size: 1.3rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-}
-
-#home .btn {
-  background: white;
-  color: var(--primary);
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-#home .btn:hover {
-  background: var(--secondary);
-  color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic; /* Ta signature */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 /* Travaux section */
+#travaux {
+    padding: 80px 5%;
+    background: #ffffff;
+}
+
+#travaux h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    border-left: 5px solid var(--secondary);
+    padding-left: 15px;
+    margin-bottom: 3rem;
+}
+
 .container {
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 1.5rem;
 }
-
-h2 {
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Cartes *//* Cartes */
+/* NOUVEAU STYLE INDUSTRIEL */
 .card {
   display: flex;
-  flex-direction: row; /* grand écran : image à gauche, texte à droite */
+  flex-direction: column; /* On oublie le row à 40%, en Swiper le vertical est plus pro */
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-radius: 0; /* CARRÉ : Obligatoire pour ton style */
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   overflow: hidden;
-  transition: transform 0.4s, box-shadow 0.4s;
+  height: 100%;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .card img {
-  width: 40%;       /* image à gauche sur grand écran */
+  width: 100%;
+  height: 250px; /* Hauteur fixe pour que toutes les cartes soient alignées */
   object-fit: cover;
-  transition: transform 0.4s;
-}
-
-.card:hover img {
-  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
 .card-content {
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: white;
 }
 
 .card-content h3 {
-  margin-top: 0;
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-style: italic; /* Ta signature */
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
 .card-content p {
-  margin: 1rem 0;
-  color: #333;
-  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
+/* BOUTON CARRÉ ET SOLIDE */
 .card-content .btn {
-  align-self: flex-start;
+  display: block;
+  width: 100%; /* Largeur pleine pour l'aspect pro */
+  text-align: center;
   background: var(--primary);
   color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 2rem;
+  padding: 0.8rem;
+  border-radius: 0; /* CARRÉ */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
   text-decoration: none;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.3s;
 }
 
 .card-content .btn:hover {
   background: var(--secondary);
-  transform: translateY(-2px);
 }
 
 /* Swiper */

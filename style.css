@@ -1,13 +1,12 @@
- :root {
-      --primary: #12598C;
-      --secondary: #6EA1C4;
-      --black: #000000;
-      --gray: #C2C2C2;
-    }
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==========================================
+   BLOC : RESET & VARIABLES
+   ========================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #02598C; --secondary: #6EA1C4;
+  --black: #1D1D1B; --gray: #C3C2C2;
+  --font-titles: "Neue Haas Grotesk Text Pro", sans-serif;
+  --font-body: "Arial", sans-serif;
 }
 
 /* Taille de base du texte */
@@ -457,114 +456,99 @@ li:hover .dropdown-content {
     font-size: 0.7rem;
   }
 }
-/* HABILITATION */
+/* ==========================================
+   BLOC HABILITATIONS TECHNIQUE
+   ========================================== */
 .vp-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;  /* centre verticalement les colonnes */
-  gap: 10px;
-  padding: 30px 40px;   /* moins de padding pour un bloc plus compact */
-  border-radius: 16px;
-  background-color: #f9f9fb;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  max-width: 1000px;    /* largeur max pour ressembler à un bloc */
-  margin: 50px auto;    /* centrer le bloc horizontalement */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+  padding: 5rem 10%;
+  background-color: #FFFFFF;
 }
 
-/* Colonne texte */
 .vp-text-column {
-  width: 55%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centre verticalement */
-  align-items: flex-start;
-  gap: 12px;
+  flex: 1;
+  min-width: 350px;
 }
 
 .vp-subtitle {
-  font-size: 15px;
   color: var(--secondary);
-  margin: 0;
-  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
 .vp-title {
-  font-size: 32px;
-  color: var(--primary);
-  font-weight: 500;
-  line-height: 1.4;
-  margin: 10px 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
-.vp-title span {
-  font-weight: 700;
-  color: var(--primary);
-  display: inline-block;
-}
+.vp-title span { color: var(--primary); }
 
 .vp-intro {
-  font-size: 17px;
-  color: #555;
-  line-height: 1.6;
-  margin: 20px 0;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .vp-intro span {
-  font-weight: 600;
+  font-weight: bold;
   color: var(--primary);
 }
 
-/* Colonne cartes */
-.vp-cards-column {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.vp-details {
+  font-size: 0.95rem;
+  color: #555;
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
 }
 
-/* Carte individuelle ergonomique */
-.vp-card {
-  background-color: white;
-  border-left: 4px solid transparent;
-  border-radius: 12px;
-  padding: 14px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* GRILLE DE LOGOS */
+.vp-badges-container {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
 }
 
-.vp-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+.vp-badge {
+  background: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
 }
 
-.vp-lightblue { border-left-color: #6cb4ee; }
-.vp-white { border-left-color: #ddd; }
-.vp-blue { border-left-color: var(--primary); }
+.vp-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-color: var(--primary);
+}
 
-.vp-icon {
-  font-size: 22px;
+.vp-badge img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.vp-badge p {
+  font-family: var(--font-titles);
+  font-weight: bold;
+  color: var(--black);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.vp-badge p span {
+  font-weight: normal;
   color: var(--primary);
-  margin-bottom: 8px;
-}
-
-/* Texte carte */
-.vp-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0;
-  color: #333;
-}
-
-.vp-card p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  line-height: 1.5;
+  font-size: 0.75rem;
 }
 
 /* Responsive */
@@ -602,14 +586,9 @@ li:hover .dropdown-content {
 .services-text h2 {
   font-size: 34px;
   color: var(--primary);
-  font-weight: 400;
-}
-
-.services-text .subtitle {
-  font-size: 18px;
-  color: #666;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  font-family: var(--font-titles);
+  font-style: italic;
+  font-weight: bold;
 }
 
 .steps {
@@ -627,14 +606,10 @@ li:hover .dropdown-content {
   transition: transform 0.3s ease;
 }
 
-.step:hover {
-  transform: translateY(-6px);
-}
-
 .circle {
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, #ffffff 60%, #f4f9f9 100%);
+  background: white;
   border-radius: 50%;
   padding: 30px 24px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -642,57 +617,69 @@ li:hover .dropdown-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Centre tout horizontalement */
   border: 4px solid transparent;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.4s ease; /* Transition fluide pour la couleur de fond */
 }
 
-.step.patient .circle {
-  border-color: var(--secondary);
-}
-
-.step.praticien .circle {
-  border-color: var(--gray);
-}
-
-.step.fondatrice .circle {
-  border-color:  var(--primary); 
-}
-
-/* Typo et espacement */
+/* === TITRES AGRANDIS ET CENTRÉS === */
 .circle h3 {
-  font-size: 15px;
-  color: #666;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 24px; /* Agrandissement du titre */
+  font-family: var(--font-titles);
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: center; /* Centrage */
+  transition: color 0.3s ease;
 }
 
+/* Description (ne change pas de taille) */
 .circle .title {
-  font-size: 18px;
-  color: var(--primary);
-  font-weight: 700;
+  font-size: 16px; 
+  color: var(--black);
+  font-weight: 500;
   margin-bottom: 10px;
   line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+/* === COULEURS DES CONTOURS ET SURVOL === */
+
+/* Particulier (Secondary) */
+.step.particulier .circle { border-color: var(--secondary); h3 { color: var(--secondary); } }
+.step.particulier:hover .circle { background-color: var(--secondary); }
+
+/* Entreprise (Gray) */
+.step.entreprise .circle { border-color: var(--gray); h3 { color: #888; } }
+.step.entreprise:hover .circle { background-color: var(--gray); }
+
+/* Marché Public (Primary) */
+.step.mp .circle { border-color: var(--primary); h3 { color: var(--primary); } }
+.step.mp:hover .circle { background-color: var(--primary); }
+
+/* Inversion des textes au survol */
+.step:hover .circle h3, 
+.step:hover .circle .title, 
+.step:hover .circle a {
+  color: #FFFFFF !important;
 }
 
 .circle a {
-  margin-top: auto;
+  margin-top: 10px;
   display: inline-block;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--primary);
-  padding: 4px 8px; /* réduit la taille */
+  padding: 4px 12px;
   border-radius: 8px;
-  background-color: transparent; /* pas de fond */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: 0.3s;
 }
 
-.circle a:hover {
-  color: var(--secondary); /* changement de couleur au survol */
-  text-decoration: underline; /* simple soulignement au hover */
+.step:hover .circle a {
+  border: 1px solid white;
 }
-
 
 /* Mobile responsive */
 @media (max-width: 768px) {

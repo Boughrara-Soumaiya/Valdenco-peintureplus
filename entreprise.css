@@ -1,13 +1,12 @@
- :root {
-      --primary: #12598C;
-      --secondary: #6EA1C4;
-      --black: #000000;
-      --gray: #C2C2C2;
-    }
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==========================================
+   BLOC : RESET & VARIABLES
+   ========================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #02598C; --secondary: #6EA1C4;
+  --black: #1D1D1B; --gray: #C3C2C2;
+  --font-titles: "Neue Haas Grotesk Text Pro", sans-serif;
+  --font-body: "Arial", sans-serif;
 }
 
 /* Taille de base du texte */
@@ -295,317 +294,181 @@ li:hover .dropdown-content {
   }
 }
 
-/* Home / Intro section */
-.home-particulier {
-  margin-top: 100px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-  border-radius: 10px;
-  margin-bottom: 3rem;
+/* --- HERO (INTRO) --- */
+.home {
+    margin-top: 80px;
+    background: var(--primary); /* Couleur pleine = Solidité */
+    color: white;
+    padding: 80px 10%;
+    text-align: left;
+    border-radius: 0; /* On enlève les arrondis */
 }
 
-.home-particulier h1 {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  margin-bottom: 1rem;
+.home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic; /* Ta signature */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
-.home-particulier p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
-}
-
-/* Section : Pourquoi nous choisir */
+/* --- POURQUOI NOUS CHOISIR --- */
 #pourquoi-nous-choisir {
-  padding: 4rem 2rem;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  margin-bottom: 3rem;
+    padding: 60px 10%;
+    background: white;
+    border-top: 5px solid var(--secondary);
 }
 
 #pourquoi-nous-choisir h2 {
-  text-align: center;
-  color: var(--primary);
-  margin-bottom: 2rem;
-  font-size: clamp(1.8rem, 5vw, 2rem);
-}
-
-#pourquoi-nous-choisir p {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-  margin-bottom: 2rem;
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 #pourquoi-nous-choisir ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-#pourquoi-nous-choisir ul li {
-  background-color: var(--secondary);
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  flex: 1 1 200px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+#pourquoi-nous-choisir li {
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid var(--primary);
+    font-weight: bold;
+    color: var(--primary);
 }
 
-#pourquoi-nous-choisir ul li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
+/* --- SERVICES --- */
 
-/* Section : Services */
+/* --- SECTION SERVICES : COMPACTE & PRO --- */
 #services {
-  padding: 4rem 2rem;
-  margin-bottom: 3rem;
+    padding: 60px 5%; /* Réduction des marges haut/bas */
+    background-color: #f4f7f9;
 }
 
-#services h2 {
-  text-align: center;
-  color: var(--primary);
-  margin-bottom: 2.5rem;
-  font-size: clamp(1.8rem, 5vw, 2rem);
+.services-wrapper {
+    display: flex;
+    gap: 40px; /* Espace resserré entre titre et grille */
+    align-items: center; 
+    max-width: 1100px; /* On limite la largeur totale pour éviter l'étalement */
+    margin: 0 auto;
+}
+
+.services-intro {
+    flex: 0 0 30%; 
+}
+
+.services-intro h2 {
+    text-align: left;
+    color: var(--primary);
+    font-size: 1.8rem; /* TAILLE RÉDUITE : Plus élégant */
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+    border-left: 5px solid var(--secondary);
+    padding-left: 15px;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; /* Écart resserré */
 }
 
 .service-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    padding: 25px; /* Padding réduit : Moins massif */
+    border: 1px solid #ddd;
+    border-radius: 0;
+    min-height: 140px; /* Hauteur minimale réduite */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .service-card h3 {
-  margin-bottom: 1rem;
-  color: var(--primary);
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--primary);
+    font-size: 1rem; /* Typographie plus fine */
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .service-card p {
-  font-size: clamp(0.95rem, 2.2vw, 1rem);
-  color: #333;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-size: 0.85rem; /* Texte plus petit */
+    line-height: 1.4;
 }
 
+/* --- INTERACTION --- */
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    background: white; /* On reste sobre, pas de flash bleu total */
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Section : Travaux réalisés */
+.service-card:hover h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.service-card:hover p {
+    opacity: 1;
+    max-height: 80px;
+    margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .services-wrapper { flex-direction: column; align-items: flex-start; }
+    .services-intro { flex: 1; margin-bottom: 30px; }
+    .services-grid { width: 100%; }
+}
+/* --- TRAVAUX (AVANT/APRÈS) --- */
 #travaux {
-  padding: 4rem 2rem;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  margin-bottom: 3rem;
-}
-
-#travaux h2 {
-  text-align: center;
-  color: var(--primary);
-  margin-bottom: 2.5rem;
-  font-size: clamp(1.8rem, 5vw, 2rem);
+    padding: 80px 10%;
+    background: white;
 }
 
 .travaux-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
 }
 
 .travail-card {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f9f9f9;
-}
-
-.travail-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+    padding: 15px;
 }
 
 .travail-card h4 {
-  padding: 1rem;
-  color: var(--primary);
-  text-align: center;
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin-bottom: 15px;
+    color: var(--primary);
+    text-align: center;
 }
 
 .travail-images {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 10px;
 }
 
 .travail-images img {
-  width: 48%;
-  border-radius: 5px;
+    width: 50%;
+    border-radius: 0; /* Carré */
+    object-fit: cover;
 }
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--primary);
-  color: white;
-  margin-top: 3rem;
-}
-
-/* Fully responsive adjustments */
-@media (max-width: 1024px) {
-  .travail-images img {
-    width: 48%;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-particulier {
-    padding: 4rem 1.5rem;
-    margin-top: 80px;
-  }
-
-  #pourquoi-nous-choisir, 
-  #services, 
-  #travaux {
-    padding: 3rem 1.5rem;
-  }
-
-  .travail-images img {
-    width: 100%;
-  }
-
-  #pourquoi-nous-choisir ul li {
-    flex: 1 1 100%;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-particulier {
-    padding: 3rem 1rem;
-    margin-top: 60px;
-  }
-
-  .home-particulier h1 {
-    font-size: 2rem;
-  }
-
-  .home-particulier p {
-    font-size: 1rem;
-  }
-
-  #services h2,
-  #pourquoi-nous-choisir h2,
-  #travaux h2 {
-    font-size: 1.5rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .travail-card h4 {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 360px) {
-  .home-particulier {
-    padding: 2rem 1rem;
-    margin-top: 50px;
-  }
-
-  .home-particulier h1 {
-    font-size: 1.6rem;
-  }
-
-  .home-particulier p {
-    font-size: 0.95rem;
-  }
-
-  #pourquoi-nous-choisir,
-  #services,
-  #travaux {
-    padding: 2rem 1rem;
-  }
-
-  #pourquoi-nous-choisir h2,
-  #services h2,
-  #travaux h2 {
-    font-size: 1.3rem;
-  }
-
-  #pourquoi-nous-choisir p {
-    font-size: 0.95rem;
-  }
-
-  #pourquoi-nous-choisir ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  #pourquoi-nous-choisir ul li {
-    font-size: 0.9rem;
-    padding: 0.8rem 1rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .service-card {
-    padding: 1.5rem 1rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-  }
-
-  .travaux-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .travail-card h4 {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
-
-  .travail-images img {
-    width: 100%;
-  }
-}
-
 
 /* ===== Partenaires ===== */
 .partners-section {
@@ -887,3 +750,152 @@ footer .footnote {
   }
 }
 
+
+/* --- SECTION POURQUOI DEVENIR PARTENAIRE --- */
+/* --- SECTION LOGOS (LA PREUVE) --- */
+.partner {
+    padding: 60px 10%;
+    background: #ffffff; /* Blanc pur */
+}
+
+/* --- SECTION ARGUMENTAIRE (L'APPEL À L'ACTION) --- */
+.why-partner {
+    padding: 60px 10%;
+    background: #f4f7f9; /* Gris très léger pour marquer la fin de zone */
+    color: var(--primary);
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 5px solid var(--secondary); /* Rappel de ta couleur d'accent */
+}
+
+.why-partner h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.why-partner p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+    color: #444;
+}
+
+/* Bouton plus percutant */
+.why-partner .btn-partner {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.why-partner .btn-partner:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .why-partner { padding: 60px 5%; }
+    .why-partner h2 { font-size: 1.6rem; }
+    .why-partner p { padding: 20px; font-size: 1rem; }
+}
+/*POUR LA PAGE PARTENAIRE*/
+.partner {
+    padding: 80px 10%;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+}
+
+.partner h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+/* Barre de soulignement stylisée sous le titre */
+.partner h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 15px auto 0;
+}
+
+/* Grille des logos */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.partner-card {
+    background: white;
+    padding: 30px 20px;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-card img {
+    max-width: 140px; /* Taille pro pour des logos */
+    height: auto;
+    filter: grayscale(100%); /* Look uniforme au départ */
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    margin-bottom: 15px;
+}
+
+.partner-card p {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* --- INTERACTION AU SURVOL --- */
+.partner-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+
+.partner-card:hover img {
+    filter: grayscale(0%); /* Le logo reprend ses couleurs */
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.partner-card:hover p {
+    color: var(--primary);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .partner { padding: 60px 5%; }
+    .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+}

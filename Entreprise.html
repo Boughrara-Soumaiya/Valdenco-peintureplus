@@ -7,7 +7,7 @@
 <meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
 <meta name="theme-color" content="#0f766e" />
 <link rel="icon" href="logo/logomark 1.png" />
-<link rel="stylesheet" href="particulier.css" />
+<link rel="stylesheet" href="entreprise.css" />
 </head>
 <body>
     <!-- == HEADER ==-->
@@ -31,9 +31,9 @@
       <li>
         <a href="#">Services ▾</a>
         <div class="dropdown-content">
-          <a href="particulier.html">Particulier</a>
           <a href="Entreprise.html">Entreprise</a>
           <a href="Marchépublic.html">Marché public</a>
+          <a href="particulier.html">Particulier</a>
         </div>
       </li>
       <li><a href="nostravaux.html">Nos travaux</a></li>
@@ -77,9 +77,9 @@
   </script>
 
 <!-- INTRO-->
-  <section class="home-particulier">
-  <h1>pour Entreprise </h1>
-  <p>Nous accompagnons les entreprises pour la rénovation et l'embellissement de leurs locux professionnels. Qualité, respect des délais et services sur mesure pour vos projets commerciaux.</p>
+  <section class="home">
+  <h1>Entreprise </h1>
+  <p>Nous accompagnons les entreprises pour la rénovation et l'embellissement de leurs locux professionnels.</p>
 </section>
 
 
@@ -87,45 +87,50 @@
   <section id="pourquoi-nous-choisir">
     <div class="container">
       <h2>Pourquoi nous choisir ?</h2>
-      <p>Peinture Plus garantit aux entreprises un service professionnel, efficace et conforme aux normes. Nous travaillons sur tous types de locaux professionnels, bureaux, commerces ou entrepôts.</p>
       <ul>
         <li>Respect strict des délais</li>
         <li>Équipe formée aux normes professionnelles</li>
         <li>Produits durables et de qualité</li>
         <li>Devis rapide et personnalisé</li>
+        <li>Habilitations techniques et respect des normes de sécurité</li>
+        <li>Intervention sur sites occupés sans interruption d'activité</li>
       </ul>
     </div>
   </section>
 
   <!-- Nos services -->
   <section id="services">
-    <div class="container">
-      <h2>Nos Services pour Entreprises</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Peinture de bureaux</h3>
-          <p>Optimisez vos espaces professionnels avec des peintures adaptées et durables.</p>
-        </div>
-        <div class="service-card">
-          <h3>Façades et extérieurs</h3>
-          <p>Nous rénovons vos façades pour un rendu esthétique et résistant aux intempéries.</p>
-        </div>
-        <div class="service-card">
-          <h3>Espaces commerciaux</h3>
-          <p>Transformez vos boutiques ou showrooms avec des finitions modernes et attractives.</p>
-        </div>
-        <div class="service-card">
-          <h3>Aménagements spéciaux</h3>
-          <p>Peinture décorative, signalétique ou effets spéciaux pour vos espaces professionnels.</p>
-        </div>
+  <div class="container services-wrapper">
+    <div class="services-intro">
+      <h2>Les services que nous vous proposons</h2>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Peinture de bureaux</h3>
+        <p>Optimisez vos espaces professionnels avec des peintures adaptées et durables.</p>
+      </div>
+      <div class="service-card">
+        <h3>Façades et extérieurs</h3>
+        <p>Nous rénovons vos façades pour un rendu esthétique et résistant aux intempéries.</p>
+      </div>
+      <div class="service-card">
+        <h3>Espaces commerciaux</h3>
+        <p>Transformez vos boutiques ou showrooms avec des finitions modernes et attractives.</p>
+      </div>
+      <div class="service-card">
+        <h3>Aménagements spéciaux</h3>
+        <p>Peinture décorative, signalétique ou effets spéciaux pour vos espaces professionnels.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Travaux réalisés -->
   <section id="travaux">
     <div class="container">
-      <h2>Travaux Réalisés pour Entreprises</h2>
+      <h2>Travaux Réalisés</h2>
+      <br>
       <div class="travaux-grid">
         <div class="travail-card">
           <h4>Bureaux - Avant/Après</h4>
@@ -172,67 +177,127 @@
 
 <!-- Contact -->
 <section id="contact" class="container">
-<div class="section-head">
-<h2>Nous contacter</h2>
-<p>Expliquez votre besoin : nous revenons vers vous sous 24–48 h ouvrées.</p>
-</div>
-<div class="two">
-<form id="contactForm" class="panel reveal" action="contact.php" method="POST">
-  <div>
-    <label for="nom">Nom</label>
-    <input id="nom" name="nom" autocomplete="name" required />
+  <div class="section-head">
+    <h2>Nous contacter</h2>
   </div>
-  <div>
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" autocomplete="email" required />
-  </div>
-  <div>
-    <label for="tel">Téléphone</label>
-    <input id="tel" name="tel" type="tel" autocomplete="tel" />
-  </div>
-  <div>
-    <label for="sujet">Sujet</label>
-    <select id="sujet" name="sujet" required>
-      <option value="">Choisir…</option>
-      <option>Demande de devis</option>
-      <option>Information technique</option>
-      <option>Autre</option>
-    </select>
-  </div>
-  <div class="full">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" required placeholder="Décrivez votre besoin pour que nous puissions vous répondre efficacement"></textarea>
-  </div>
-  <div class="full">
-    <button class="btn primary" type="submit">Envoyer</button>
-  </div>
-</form>
-</section>
-</main>
 
-<!-- JSON‑LD -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "ValdenCo – Peinture Plus",
-"description": "Spécialiste en peintures industrielles, résines de sol époxy, anticorrosion et marquage.",
-"address": {
-"@type": "PostalAddress",
-"streetAddress": "8 Rue de la Forêt",
-"addressLocality": "Maxstadt"",
-"postalCode": "57660",
-"addressCountry": "FR"
-},
-"telephone": "+330637351566",
-"email": "sboughrara.860@gmail.com",
-"url": "https://valdenco-peintureplus.com/",
-"areaServed": "France",
-"image": [
-"https://images.unsplash.com/photo-1577413575390-1a28a2c07da9?q=80&w=1200&auto=format&fit=crop"
-]
-}
+  <div class="two">
+    <form id="contactForm" class="panel reveal" action="https://api.web3forms.com/submit" method="POST">
+      
+      <input type="hidden" name="access_key" value="a7075ca9-39a8-4b92-b4da-35cf613aa063"> <input type="hidden" name="subject" value="Nouveau contact - ValdenCo Peinture">
+      <input type="hidden" name="from_name" value="Site Web ValdenCo">
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <div>
+        <label for="nom">Nom / Entreprise</label>
+        <input id="nom" name="nom" autocomplete="name" required placeholder="Votre nom" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="nom@gmail.com" />
+      </div>
+
+      <div>
+        <label for="tel">Téléphone <span style="font-weight: normal; font-size: 0.8rem; opacity: 0.6;">(Facultatif)</span></label>
+        <input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 00 00 00 00" />
+      </div>
+
+      <div>
+        <label for="sujet">Sujet de votre demande</label>
+        <select id="sujet" name="sujet" required>
+          <option value="">Choisir…</option>
+          <option value="Devis">Demande de devis</option>
+          <option value="Information">Demande d’information</option>
+          <option value="Autre">Autre</option>
+        </select>
+      </div>
+
+      <div class="full">
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" required placeholder="Détaillez votre projet (surface, type de locaux, délais souhaités...)"></textarea>
+      </div>
+
+      <div class="full" style="display: flex; gap: 12px; align-items: flex-start; margin: 20px 0;">
+        <input type="checkbox" id="rgpd" name="rgpd" required style="width: 18px; height: 18px; margin-top: 3px; cursor: pointer;">
+        <label for="rgpd" style="font-size: 0.85rem; font-weight: normal; cursor: pointer; color: #444; line-height: 1.4;"> 
+          J'ai pris connaissance et j'accepte que mes données soient traitées pour répondre à ma demande conformément à la 
+          <a href="politique-confidentialite.html" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: underline;">
+            Politique de confidentialité
+          </a>.
+        </label>
+      </div>
+
+      <div class="full">
+        <button class="btn primary" type="submit" id="submitBtn">Envoyer la demande</button>
+      </div>
+      
+      <div id="result" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
+    </form>
+  </div>
+</section>
+<script>
+const form = document.getElementById('contactForm');
+const result = document.getElementById('result');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+    
+    // Préparation des données
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    // État visuel "En cours"
+    result.innerHTML = "Patientez, envoi en cours...";
+    result.style.color = "#555";
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.7";
+    submitBtn.innerText = "Envoi...";
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+    .then(async (response) => {
+        let res = await response.json();
+        if (response.status == 200) {
+            // SUCCESS : Message clair et pro en français
+            result.innerHTML = "✅ Merci ! Votre message a bien été envoyé. Nous vous répondrons rapidement.";
+            result.style.color = "green";
+            form.reset(); // Vide les champs pour éviter les doubles envois
+        } else {
+            // ERREUR SERVEUR
+            console.log(response);
+            result.innerHTML = "❌ Une erreur est survenue lors de l'envoi.";
+            result.style.color = "red";
+        }
+    })
+    .catch(error => {
+        // ERREUR RÉSEAU
+        console.log(error);
+        result.innerHTML = "❌ Impossible de contacter le serveur. Vérifiez votre connexion.";
+        result.style.color = "red";
+    })
+    .then(function() {
+        // RÉINITIALISATION DU BOUTON
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "1";
+        submitBtn.innerText = "Envoyer la demande";
+        
+        // Cache le message de succès après 10 secondes pour nettoyer l'interface
+        setTimeout(() => {
+            result.innerHTML = "";
+        }, 10000);
+    });
+});
 </script>
+</main>
 
 <!-- Footer -->
 <footer>
