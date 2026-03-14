@@ -456,139 +456,126 @@ li:hover .dropdown-content {
     font-size: 0.7rem;
   }
 }
-/*modification*/
 /* ==========================================
-   BLOC HABILITATIONS TECHNIQUE
+   BLOC HABILITATIONS 
    ========================================== */
 .vp-section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4rem;
-  padding: 5rem 10%;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 60px); /* Espace fluide entre texte et badges */
+  padding: clamp(30px, 8vw, 80px) 5%;
+  max-width: 1300px;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
 .vp-text-column {
-  flex: 1;
-  min-width: 350px;
-}
-
-.vp-subtitle {
-  color: var(--secondary);
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  flex: 1 1 400px; /* Bascule sous les badges si l'espace est < 400px */
 }
 
 .vp-title {
-  font-size: 2.5rem;
-  line-height: 1.2;
+  font-size: clamp(1.8rem, 5vw, 2.6rem); /* Titre qui réduit tout seul */
+  font-weight: 800;
+  line-height: 1.1;
   margin-bottom: 1.5rem;
+  color: var(--black);
 }
 
 .vp-title span { color: var(--primary); }
 
 .vp-intro {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.vp-intro span {
-  font-weight: bold;
-  color: var(--primary);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
 }
 
 .vp-details {
   font-size: 0.95rem;
   color: #555;
   border-left: 4px solid var(--secondary);
-  padding-left: 1rem;
+  padding-left: 1.2rem;
+  background: #f9f9f9; /* Léger fond pour faire ressortir le bloc */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-/* GRILLE DE LOGOS */
+/* GRILLE DE BADGES DYNAMIQUE */
 .vp-badges-container {
-  flex: 1.2;
+  flex: 1.2 1 350px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
+  /* La magie : min 120px pour tenir à 2 sur les petits écrans type iPhone SE */
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  width: 100%;
 }
 
 .vp-badge {
-  background: #fdfdfd;
-  padding: 1.5rem;
-  border-radius: 20px;
+  background: #ffffff;
+  padding: 1.2rem 0.8rem;
+  border-radius: 12px;
   text-align: center;
   border: 1px solid #eee;
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .vp-badge:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   border-color: var(--primary);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 .vp-badge img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+  width: clamp(40px, 6vw, 60px); /* Icone fluide */
+  height: auto;
+  margin-bottom: 0.8rem;
 }
 
 .vp-badge p {
-  font-family: var(--font-titles);
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--black);
-  font-size: 0.85rem;
-  line-height: 1.3;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .vp-badge p span {
-  font-weight: normal;
+  display: block;
+  font-weight: 400;
   color: var(--primary);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  margin-top: 5px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .vp-section {
-    flex-direction: column;
-    gap: 30px;
-    padding: 25px 20px;
-    align-items: flex-start;
-  }
-  .vp-text-column, .vp-cards-column { width: 100%; }
-}
-
+/* AJUSTEMENTS SPECIFIQUES POUR MOBILE */
 @media (max-width: 768px) {
-  .vp-intro { font-size: 15px; }
-  .vp-title { font-size: 28px; }
-  .vp-card h3 { font-size: 15px; }
-  .vp-card p { font-size: 13px; }
+  .vp-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .vp-details {
+    text-align: left; /* Garde la barre à gauche */
+    margin-top: 20px;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
   .vp-badges-container {
-    grid-template-columns: 1fr 1fr 1fr; 
-  }
-  .vp-section { padding: 25px; gap: 25px; }
-  .vp-card { padding: 15px; }
-  .vp-card h3 { font-size: 14px; }
-  .vp-card p { font-size: 12px; }
-}
-@media (max-width: 480px) {
-  .vp-badges-container {
-    grid-template-columns: 1fr 1fr; /* 2 badges par ligne sur très petit écran */
+    /* Forcer 2 colonnes même sur les téléphones très étroits */
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
   }
   
   .vp-badge {
     padding: 1rem 0.5rem;
   }
   
-  .vp-badge img { width: 40px; height: 40px; }
+  .vp-badge p {
+    font-size: 0.7rem; /* Réduction du texte pour éviter les coupures */
+  }
 }
 /* === Services  === */
 .services {
