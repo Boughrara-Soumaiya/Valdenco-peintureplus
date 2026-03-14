@@ -312,232 +312,155 @@ li:hover .dropdown-content {
     margin-bottom: 1rem;
 }
 
-/* --- POURQUOI NOUS CHOISIR --- */
-#pourquoi-nous-choisir {
+
+
+/* --- SECTION POURQUOI DEVENIR PARTENAIRE --- */
+/* --- SECTION LOGOS (LA PREUVE) --- */
+.partner {
     padding: 60px 10%;
-    background: white;
-    border-top: 5px solid var(--secondary);
+    background: #ffffff; /* Blanc pur */
 }
 
-#pourquoi-nous-choisir h2 {
+/* --- SECTION ARGUMENTAIRE (L'APPEL À L'ACTION) --- */
+.why-partner {
+    padding: 60px 10%;
+    background: #f4f7f9; /* Gris très léger pour marquer la fin de zone */
     color: var(--primary);
-    text-transform: uppercase;
-    margin-bottom: 30px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 5px solid var(--secondary); /* Rappel de ta couleur d'accent */
 }
 
-#pourquoi-nous-choisir ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-#pourquoi-nous-choisir li {
-    background: #f9f9f9;
-    padding: 20px;
-    border-left: 4px solid var(--primary);
-    font-weight: bold;
-    color: var(--primary);
-}
-
-/* --- SERVICES --- */
-
-/* --- SECTION SERVICES : COMPACTE & PRO --- */
-#services {
-    padding: 60px 5%; /* Réduction des marges haut/bas */
-    background-color: #f4f7f9;
-}
-
-.services-wrapper {
-    display: flex;
-    gap: 40px; /* Espace resserré entre titre et grille */
-    align-items: center; 
-    max-width: 1100px; /* On limite la largeur totale pour éviter l'étalement */
-    margin: 0 auto;
-}
-
-.services-intro {
-    flex: 0 0 30%; 
-}
-
-.services-intro h2 {
-    text-align: left;
-    color: var(--primary);
-    font-size: 1.8rem; /* TAILLE RÉDUITE : Plus élégant */
+.why-partner h2 {
+    font-size: 1.8rem;
     font-weight: 800;
     font-style: italic;
     text-transform: uppercase;
-    line-height: 1.2;
-    margin: 0;
-    border-left: 5px solid var(--secondary);
-    padding-left: 15px;
-}
-
-.services-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px; /* Écart resserré */
-}
-
-.service-card {
-    background: white;
-    padding: 25px; /* Padding réduit : Moins massif */
-    border: 1px solid #ddd;
-    border-radius: 0;
-    min-height: 140px; /* Hauteur minimale réduite */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.service-card h3 {
+    margin-bottom: 1rem;
     color: var(--primary);
-    font-size: 1rem; /* Typographie plus fine */
-    font-weight: 700;
-    font-style: italic;
+}
+
+.why-partner p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+    color: #444;
+}
+
+/* Bouton plus percutant */
+.why-partner .btn-partner {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
     text-transform: uppercase;
-    margin: 0;
-}
-
-.service-card p {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 0.85rem; /* Texte plus petit */
-    line-height: 1.4;
 }
 
-/* --- INTERACTION --- */
-.service-card:hover {
-    background: white; /* On reste sobre, pas de flash bleu total */
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.service-card:hover h3 {
-    color: var(--primary);
-    margin-bottom: 8px;
-}
-
-.service-card:hover p {
-    opacity: 1;
-    max-height: 80px;
-    margin-top: 5px;
+.why-partner .btn-partner:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
 }
 
 /* RESPONSIVE */
-@media (max-width: 992px) {
-    .services-wrapper { flex-direction: column; align-items: flex-start; }
-    .services-intro { flex: 1; margin-bottom: 30px; }
-    .services-grid { width: 100%; }
-}
-/* --- TRAVAUX (AVANT/APRÈS) --- */
-#travaux {
-    padding: 80px 10%;
-    background: white;
-}
-
-.travaux-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-}
-
-.travail-card {
-    border: 1px solid #eee;
-    padding: 15px;
-}
-
-.travail-card h4 {
-    margin-bottom: 15px;
-    color: var(--primary);
-    text-align: center;
-}
-
-.travail-images {
-    display: flex;
-    gap: 10px;
-}
-
-.travail-images img {
-    width: 50%;
-    border-radius: 0; /* Carré */
-    object-fit: cover;
-}
-
-/* ===== Partenaires ===== */
-.partners-section {
-  padding: 6rem 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.partners-head h2 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.partners-head p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Carousel */
-.partners-carousel {
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 2rem;
-  animation: scroll 20s linear infinite;
-}
-
-.partner {
-  flex: 0 0 auto;
-}
-
-.partner img {
-  max-width: 120px;
-  max-height: 80px;
-  object-fit: contain;
-  filter: grayscale(50%);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.partner img:hover {
-  transform: scale(1.1);
-  filter: grayscale(0%);
-}
-
-/* Animation horizontale */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Ajuste selon le nombre d’éléments */
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .carousel-track {
-    gap: 1.5rem;
-  }
-  .partner img {
-    max-width: 90px;
-    max-height: 60px;
-  }
+    .why-partner { padding: 60px 5%; }
+    .why-partner h2 { font-size: 1.6rem; }
+    .why-partner p { padding: 20px; font-size: 1rem; }
+}
+/*POUR LA PAGE PARTENAIRE*/
+.partner {
+    padding: 80px 10%;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+}
+
+.partner h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+/* Barre de soulignement stylisée sous le titre */
+.partner h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 15px auto 0;
+}
+
+/* Grille des logos */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.partner-card {
+    background: white;
+    padding: 30px 20px;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-card img {
+    max-width: 140px; /* Taille pro pour des logos */
+    height: auto;
+    filter: grayscale(100%); /* Look uniforme au départ */
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    margin-bottom: 15px;
+}
+
+.partner-card p {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* --- INTERACTION AU SURVOL --- */
+.partner-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+
+.partner-card:hover img {
+    filter: grayscale(0%); /* Le logo reprend ses couleurs */
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.partner-card:hover p {
+    color: var(--primary);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .partner { padding: 60px 5%; }
+    .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
 }
 
 /* ===== Contact ===== */
@@ -749,4 +672,3 @@ footer .footnote {
     justify-content: center;
   }
 }
-
