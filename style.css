@@ -576,6 +576,17 @@ li:hover .dropdown-content {
   .vp-card h3 { font-size: 14px; }
   .vp-card p { font-size: 12px; }
 }
+@media (max-width: 480px) {
+  .vp-badges-container {
+    grid-template-columns: 1fr 1fr; /* 2 badges par ligne sur très petit écran */
+  }
+  
+  .vp-badge {
+    padding: 1rem 0.5rem;
+  }
+  
+  .vp-badge img { width: 40px; height: 40px; }
+}
 /* === Services  === */
 .services {
   padding: 80px 60px;
