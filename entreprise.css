@@ -345,6 +345,34 @@ li:hover .dropdown-content {
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
+/* --- HERO (INTRO) --- */
+.home {
+    margin-top: 80px; /* Pour ne pas être sous le header fixe */
+    background: var(--primary);
+    color: white;
+    padding: 60px 5%; /* Padding réduit pour plus d'espace texte */
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home h1 {
+    /* Taille adaptative : 8% de la largeur de l'écran, plafonné à 3rem */
+    font-size: clamp(2rem, 8vw, 3rem); 
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    word-wrap: break-word; /* Force le retour à la ligne si le mot est trop long */
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 40px 5%;
+    }
+}
 
 /* --- POURQUOI NOUS CHOISIR --- */
 #pourquoi-nous-choisir {
@@ -462,6 +490,27 @@ li:hover .dropdown-content {
     opacity: 1;
     max-height: 80px;
     margin-top: 5px;
+}
+
+/* RESPONSIVE CORRECTIF */
+@media (max-width: 992px) {
+    .services-wrapper { 
+        flex-direction: column; /* Titre passe au dessus des cartes */
+    }
+    .services-intro { 
+        flex: none; 
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Une seule colonne propre sur téléphone */
+    }
+    .services-intro h2 {
+        font-size: 1.4rem;
+    }
 }
 
 /* RESPONSIVE */
