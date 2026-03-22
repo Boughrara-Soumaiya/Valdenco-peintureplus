@@ -1142,6 +1142,44 @@ footer .footnote {
   border-top: 1px solid rgba(255,255,255,0.2);
   padding-top: 1rem;
 }
+/* Suppression des puces et reset des marges de liste */
+.footer-links {
+    list-style: none; /* Supprime le point moche */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px; /* Espace propre entre les lignes */
+    line-height: 1.4;
+}
+
+.footer-links a {
+    color: #e0f2f1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Ajustement pour le mobile (Centrage propre sans décalage) */
+@media (max-width: 768px) {
+    footer .footer-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centre tout le bloc */
+        text-align: center;  /* Centre le texte */
+    }
+    
+    .footer-links {
+        display: inline-block;
+        text-align: center;
+    }
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
