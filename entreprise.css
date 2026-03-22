@@ -10,6 +10,40 @@
 }
 
 /* Taille de base du texte */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  margin: 0;
+  padding: 0;
+}
+/* Ajustement global des paddings pour mobile */
+@media (max-width: 768px) {
+  .home, 
+  #pourquoi-nous-choisir, 
+  #services, 
+  #travaux, 
+  #contact {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .home h1 {
+    font-size: 2rem; /* Réduction du titre qui peut bloquer la largeur */
+  }
+
+  .travaux-grid {
+    grid-template-columns: 1fr; /* Force une seule colonne */
+  }
+}
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Passer en une seule colonne sur mobile */
+  }
+  
+  .services-intro h2 {
+    font-size: 1.5rem;
+  }
+}
 html {
   font-size: 16px; /* 1rem = 16px partout */
   -webkit-text-size-adjust: 100%; /* évite que Safari agrandisse le texte */
