@@ -412,48 +412,55 @@ li:hover .dropdown-content {
   color: #c2c2c2;
 }
 /* RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 992px) {
+  .home {
+    padding: 6rem 1rem; /* On réduit le padding trop large sur tablette */
+  }
+
   .home-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* On cible home-left au lieu de home-text pour que ça marche */
+  .home-left {
+    flex: 1 1 auto;
     margin-bottom: 2rem;
   }
 
-  .home-text {
-    margin-bottom: 2rem;
-  }
-
-  .description {
+  .home-left .description {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .buttons {
+  /* On cible home-buttons au lieu de buttons */
+  .home-buttons {
     justify-content: center;
   }
 
-  .overlay-stats {
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
+  /* MASQUER L'IMAGE SUR PETIT ÉCRAN */
+  .home-right {
+    display: none; /* L'image disparaît ici */
   }
 }
 
 @media (max-width: 576px) {
-  .home-text h1 {
-    font-size: 1.6rem;
+  .home {
+    padding: 4rem 1rem;
   }
 
-  .description {
+  .home-left h1 {
+    font-size: 1.8rem; /* Un peu plus grand que ton 1.6 pour rester lisible */
+  }
+
+  .home-left .description {
     font-size: 0.95rem;
   }
 
-  .overlay-stats strong {
-    font-size: 1rem;
-  }
-
-  .overlay-stats span {
-    font-size: 0.7rem;
+  .home-buttons {
+    flex-direction: column; /* Boutons l'un sur l'autre sur mobile pour cliquer plus facilement */
+    gap: 10px;
   }
 }
 /* ==========================================
@@ -696,7 +703,8 @@ li:hover .dropdown-content {
   .circle .title {
     font-size: 16px;
   }
-}/* ===== Section Réalisations ===== */
+}
+/* ===== Section Réalisations (COULEURS D'ORIGINE) ===== */
 #realisations {
   padding: 6rem 2rem;
   background: #f9f9f9;
@@ -715,13 +723,7 @@ li:hover .dropdown-content {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: var(--primary);
-}
-
-#realisations .realisations-head p {
-  font-size: 1rem;
-  color: #555;
-  max-width: 600px;
+  color: #1a1a1a;
 }
 
 #realisations .filters {
@@ -737,7 +739,7 @@ li:hover .dropdown-content {
   border: none;
   border-radius: 50px;
   background: #e0f2f1;
-  color: var(--primary);
+  color: var(--secondary);
   cursor: pointer;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -747,7 +749,6 @@ li:hover .dropdown-content {
 #realisations .chip:hover {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 #realisations .grid {
@@ -763,14 +764,11 @@ li:hover .dropdown-content {
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  opacity: 1;
-  transform: translateY(0);
+  display: block;
+  text-decoration: none;
 }
-#realisations .work.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-}
+
+.work.js-hidden { display: none !important; }
 
 #realisations .work img {
   width: 100%;
@@ -780,9 +778,7 @@ li:hover .dropdown-content {
   transition: transform 0.5s ease;
 }
 
-#realisations .work:hover img {
-  transform: scale(1.05);
-}
+#realisations .work:hover img { transform: scale(1.05); }
 
 #realisations .badge {
   position: absolute;
@@ -792,8 +788,169 @@ li:hover .dropdown-content {
   background: var(--primary);
   color: #fff;
   font-size: 0.9rem;
-  font-weight: 500;
   border-top-right-radius: 10px;
+}
+
+.card_overlay_v2 {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex; justify-content: center; align-items: center;
+  opacity: 0; transition: opacity 0.4s ease;
+}
+
+.card_overlay_v2 p {
+  color: #fff; border: 1px solid #fff; padding: 8px 15px; border-radius: 50px;
+}
+
+#realisations .work:hover .card_overlay_v2 { opacity: 1; }
+
+/* ====== POPUPS (LOGIQUE SANS JS) ====== */
+.popup_v2 {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center; align-items: center;
+}
+
+/* Affiche le popup quand l'ID est ciblé */
+.popup_v2:target { display: flex; }
+
+.popup_v2__container {
+  background-color: white; padding: 2rem; border-radius: 15px;
+  max-width: 700px; width: 90%; max-height: 90vh; overflow-y: auto;
+  position: relative; animation: fade-in-up 0.4s ease-out;
+}
+
+.popup_v2__close {
+  position: absolute; top: 15px; right: 20px; font-size: 2.5rem;
+  text-decoration: none; color: #333;
+}
+
+.popup_v2__title {
+  font-family: 'Playfair Display', serif; font-size: 2rem;
+  color: #1a1a1a; border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem; margin-bottom: 1.5rem; display: inline-block;
+}
+
+/* --- SLIDER CSS SANS JS --- */
+.workimg_slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Aimante les photos au centre */
+  gap: 10px;
+  margin-bottom: 0.5rem;
+  padding-bottom: 10px;
+  scrollbar-width: thin; /* Pour Firefox */
+  scrollbar-color: var(--primary) #eee;
+}
+
+/* On réutilise ta structure de classe .workimg */
+.workimg_slider .workimg {
+  flex: 0 0 100%; /* Chaque image prend 100% de la largeur du slider */
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.workimg_slider img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain; /* L'image entière est visible */
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.slider_hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* --- GRILLE DE DÉTAILS --- */
+.project_details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur PC */
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+}
+
+.detail_item {
+  font-size: 0.9rem;
+  color: var(--black);
+}
+
+.project_description h4 {
+  font-family: var(--font-titles);
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 480px) {
+  .project_details {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
+  .workimg_slider img {
+    max-height: 200px;
+  }
+}
+
+/* Ajustement pour les petits écrans (Mobile) */
+@media (max-width: 768px) {
+  .popup_workimg img {
+    max-height: 180px; /* Sur mobile, on réduit encore pour voir le texte sans scroller */
+  }
+}
+.badge_small {
+  padding: 0.3rem 0.8rem; background: var(--primary); color: #fff;
+  border-radius: 50px; font-size: 0.8rem;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/*PAGINATION*/
+.pagination {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  width: 100%; /* Force la largeur pour que le justify-center fonctionne */
+  flex-wrap: wrap; /* Évite les bugs sur mobile */
+}
+
+.page-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px; /* Style légèrement plus moderne que le rond parfait */
+  border: 1px solid #ddd;
+  background: #fff;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* ===== Responsive ===== */
