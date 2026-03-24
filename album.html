@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
-<meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
-<meta name="theme-color" content="#0f766e" />
-<link rel="icon" href="logo/logomark 1.png" />
-<link rel="stylesheet" href="nostravaux.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
+  <meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="logo/logomark 1.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- == HEADER ==-->
+  <header>
+  <!-- Logo Desktop = Logo pour grand écran -->
+    <a href="index.html" class="logo-link">
+      <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
+    </a>
+    <!-- Logo Mobile -->
+    <a href="index.html" class="logo-link">
+      <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
+    </a>
+    <!-- Burger -->
+    <div class="burger" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="nav"> 
+     <ul>
+        <li>
+          <a href="#">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="Entreprise.html">Entreprise</a>
+            <a href="Marchépublic.html">Marché public</a>
+            <a href="particulier.html">Particulier</a>
+          </div>
+        </li>
+        <li><a href="nostravaux.html">Nos travaux</a></li>
+        <li><a href="partenaire.html">Partenaires</a></li>
+        <li><a href="index.html#contact" class="btn-devis">Obtenir un devis</a></li>
+      </ul>
+    </nav>
+    <!-- Google Translate -->
+    <div id="google_translate_element" class="translate-widget"></div>
+  </header>
+  <!-- Script menu burger-->
+  <script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
 
-
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
+  <!-- Script Google Translate -->
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,de',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      },
+      'google_translate_element'
+    );
+  }
+  </script>
+  <!-- Script Affichage du Google Translate -->
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
 <!-- Librairies (ordre important : jQuery → Turn.js → PDF.js) -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"></script>
@@ -84,75 +144,8 @@
 
 a.fallback { color: #0a58ca; text-decoration: none; }
 </style>
-</head>
-<body>
-    <!-- == HEADER ==-->
- <header>
-  <!-- Logo Desktop -->
-  <a href="index.html" class="logo-link">
-    <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
-  </a>
-
-  <!-- Logo Mobile -->
-  <a href="index.html" class="logo-link">
-    <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
-  </a>
-  <!-- Burger -->
-  <div class="burger" id="burger">
-    <div></div><div></div><div></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav id="nav">
-    <ul>
-      <li>
-        <a href="#">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="particulier.html">Particulier</a>
-          <a href="Entreprise.html">Entreprise</a>
-          <a href="Marchépublic.html">Marché public</a>
-        </div>
-      </li>
-      <li><a href="#realisations">Nos travaux</a></li>
-      <li><a href="partenaire.html">Partenaires</a></li>
-      <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
-    </ul>
-  </nav>
-
-  <!-- Google Translate -->
-  <div id="google_translate_element" class="translate-widget"></div>
-</header>
-
-<!-- Script menu burger -->
-<script>
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav');
-
-  if (burger) {
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  }
-</script>
-
-<!-- Script Google Translate -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: 'fr',
-        includedLanguages: 'fr,en,de',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      },
-      'google_translate_element'
-    );
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <!-- Contenu flipbook -->
-<div class="wrap">
+<section class="wrap">
   <div id="status" class="status">
     <div class="spinner" aria-hidden="true" style="width:18px;height:18px;border:3px solid #ddd;border-top-color:#666;border-radius:50%;animation:spin 1s linear infinite;margin-right:.6rem"></div>
     <span>Chargement de l’album…</span>
@@ -166,16 +159,14 @@ a.fallback { color: #0a58ca; text-decoration: none; }
   </div>
 
   <div class="hint">Astuce : utilisez aussi les flèches ◀ ▶ du clavier. Si rien ne s’affiche, <a class="fallback" href="album.pdf" target="_blank">ouvrez directement le PDF</a>.</div>
-</div>
-
+</section>
+<!-- === Configuration de l'album === -->
 <script>
-/* === Configuration PDF.js worker (même version que pdf.min.js) === */
 pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-/* === Nom du PDF (respecte la casse exacte du fichier sur le serveur) === */
+/* === Nom du PDF (c'est ici que vous changer l'album ATTENTION bien respecter le nom) === */
 const PDF_URL = 'album.pdf';
 
-/* Execute au chargement complet de la page pour être sûr que tout est présent */
 window.addEventListener('load', () => {
   renderPdfToFlipbook(PDF_URL);
 });
@@ -255,3 +246,54 @@ async function renderPdfToFlipbook(pdfUrl) {
 
 </body>
 </html>
+<!-- Footer -->
+<footer>
+<div class="container footer-grid">
+<div>
+<div class="brand" style="margin: 12px 0 6px;">
+<span class="logo" aria-hidden="true">
+</span>
+<span>ValdenCo – Peinture Plus</span>
+</div>
+<p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
+</div>
+<div>
+<p class="small">
+        <h4>Coordonnées</h4>
+        <p><strong>ValdenCo Peinture Plus</strong></p>
+        <address style="font-style: normal; margin-bottom: 20px;">
+            8 Rue de la Forêt<br>
+            57660 Maxstadt
+        </address>
+        <p><strong>Téléphone :</strong> 06 98 79 10 23</p>
+        <p><strong>Email :</strong> peintureplus@ymail.com</p>
+  </p>
+</div>
+<div>
+<h4>Navigation</h4>
+<p class="small">
+  <a href="#services">Services</a>
+  <br><a href="#realisations">Réalisations</a>
+  <br><a href="#partenaires">Partenaires</a>
+  <br><a href="#contact">Contact</a></p>
+</div>
+<div>
+    <h4>Juridique</h4>
+    <ul class="footer-links">
+      <li><a href="FAQ.html">Questions Fréquentes (FAQ)</a></li>
+      <li><a href="mentions-legales.html">Mentions Légales</a></li>
+      <li><a href="confidentialite.html">Confidentialité (RGPD)</a></li>
+      <li><a href="cgv.html">Conditions Générales de Vente</a></li>
+    </ul>
+</div>
+<div>
+<h4>Réseaux</h4>
+<p class="small">
+  <a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a><br>
+  <a href="#">Facebook</a></p>
+</div>
+</div>
+<div class="container footnote">
+© <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
+</div>
+</footer>

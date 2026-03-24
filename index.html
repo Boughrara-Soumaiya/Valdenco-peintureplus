@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
-<meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
-<meta name="theme-color" content="#0f766e" />
-<link rel="icon" href="logo/logomark 1.png" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
+  <meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="logo/logomark 1.png" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-    <!-- == HEADER ==-->
- <header>
-  <!-- Logo Desktop -->
-  <a href="index.html" class="logo-link">
-    <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
-  </a>
-
-  <!-- Logo Mobile -->
-  <a href="index.html" class="logo-link">
-    <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
-  </a>
-  <!-- Burger -->
-  <div class="burger" id="burger">
-    <div></div><div></div><div></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav id="nav">
-    <ul>
-      <li>
-        <a href="#">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="Entreprise.html">Entreprise</a>
-          <a href="Marchépublic.html">Marché public</a>
-          <a href="particulier.html">Particulier</a>
-        </div>
-      </li>
-      <li><a href="nostravaux.html">Nos travaux</a></li>
-      <li><a href="partenaire.html">Partenaires</a></li>
-      <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
-    </ul>
-  </nav>
-
-  <!-- Google Translate -->
-  <div id="google_translate_element" class="translate-widget"></div>
-</header>
-
-<!-- Script menu burger-->
-<script>
+  <!-- == HEADER ==-->
+  <header>
+  <!-- Logo Desktop = Logo pour grand écran -->
+    <a href="index.html" class="logo-link">
+      <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
+    </a>
+    <!-- Logo Mobile -->
+    <a href="index.html" class="logo-link">
+      <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
+    </a>
+    <!-- Burger -->
+    <div class="burger" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="nav"> 
+     <ul>
+        <li>
+          <a href="#">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="Entreprise.html">Entreprise</a>
+            <a href="Marchépublic.html">Marché public</a>
+            <a href="particulier.html">Particulier</a>
+          </div>
+        </li>
+        <li><a href="nostravaux.html">Nos travaux</a></li>
+        <li><a href="partenaire.html">Partenaires</a></li>
+        <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
+      </ul>
+    </nav>
+    <!-- Google Translate -->
+    <div id="google_translate_element" class="translate-widget"></div>
+  </header>
+  <!-- Script menu burger-->
+  <script>
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
 
   burger.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
-</script>
-
-
-<!-- Script Google Translate -->
-<script type="text/javascript">
+  </script>
+  <!-- Script Google Translate -->
+  <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
       {
@@ -71,551 +65,598 @@
       'google_translate_element'
     );
   }
-</script>
-  
+  </script>
+  <!-- Script Affichage du Google Translate -->
   <script type="text/javascript" 
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
   </script>
-<!-- == HOME ==-->
 
-<section class="home">
-  <div class="home-content">
-    <div class="home-left">
-      <p class="subtitle">PROTECTION DE SURFACE • RÉSINE DE SOL</p>
-      <h1>Des sols industriels durables & des protections anticorrosion sur-mesure.</h1>
-      <p class="description">
-        Nous réalisons la préparation des supports, l’application de résines époxy, 
-        le sablage des bétons, la peinture de pylônes HTA/HTB et le marquage. 
-        Intervention rapide, finitions impeccables.
+  <!-- === HOME ===-->
+  <section class="home">
+    <div class="home-content">
+      <div class="home-left">
+        <p class="subtitle">PROTECTION DE SURFACE • RÉSINE DE SOL</p>
+        <h1>Des sols industriels durables & des protections anticorrosion sur-mesure.</h1>
+        <p class="description">
+          Nous réalisons la préparation des supports, l’application de résines époxy, 
+          le sablage des bétons, la peinture de pylônes HTA/HTB et le marquage. 
+          Intervention rapide, finitions impeccables.
+        </p>
+        <div class="home-buttons">
+          <a href="#contact" class="btn btn-primary">Obtenir un devis</a>
+          <a href="#realisations" class="btn btn-secondary">Voir nos chantiers</a>
+        </div>
+      </div>
+      <div class="home-right">
+        <div class="image-wrapper">
+          <img src="img/couverture.png" alt="Travaux sols industriels">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- == habilitation == -->
+  <section class="vp-section">
+    <div class="vp-text-column">
+      <p class="vp-subtitle">Garanties & certifications : la sécurité d’un choix durable</p>
+      <h2 class="vp-title">Pourquoi choisir <span>ValdenCo – Peinture Plus</span> ?</h2>
+      <p class="vp-intro">
+        Depuis 2007, nous accompagnons les entreprises qui recherchent des solutions fiables, solides et sûres. 
+        <span>Avec plus de 15 ans d’expérience</span> et une équipe hautement qualifiée, nous garantissons 
+        <span>sérieux, précision et réactivité</span> sur chaque chantier.
       </p>
-      <div class="home-buttons">
-        <a href="#contact" class="btn btn-primary">Obtenir un devis</a>
-        <a href="#realisations" class="btn btn-secondary">Voir nos chantiers</a>
-      </div>
-    </div>
-    <div class="home-right">
-      <div class="image-wrapper">
-        <img src="img/couverture.png" alt="Travaux sols industriels">
-      </div>
-    </div>
-  </div>
-</section>
-<!-- == habilitation (modification) == -->
-
-<section class="vp-section">
-  <div class="vp-text-column">
-    <p class="vp-subtitle">Garanties & certifications : la sécurité d’un choix durable</p>
-    <h2 class="vp-title">Pourquoi choisir <span>ValdenCo – Peinture Plus</span> ?</h2>
-    <p class="vp-intro">
-      Depuis 2007, nous accompagnons les entreprises qui recherchent des solutions fiables, solides et sûres. 
-      <span>Avec plus de 15 ans d’expérience</span> et une équipe hautement qualifiée, nous garantissons 
-      <span>sérieux, précision et réactivité</span> sur chaque chantier.
-    </p>
-    <p class="vp-details">
-      Nos équipes détiennent les habilitations nécessaires pour intervenir dans les environnements les plus exigeants : 
-      <strong>Électricité NF C18-510</strong> (B0, H0, H0V, BS, BE, B1, B2, BR, BC), <strong>Levage</strong> (CACES R486, R482, R489) 
-      et <strong>Risques spécifiques</strong> (AIPR, Plomb, SST, Amiante SS4).
-    </p>
-  </div>
-
-  <div class="vp-badges-container">
-    
-    <div class="vp-badge">
-      <img src="icones/fiche-dalimentation.png" alt="Habilitation Électrique">
-      <p>ÉLECTRICITÉ<br><span>NF C18-510</span></p>
-      </div>
-
-    <div class="vp-badge">
-      <img src="icones/grue.png" alt="CACES Grue et Nacelle">
-      <p>LEVAGE & CACES<br><span>R486 / R482</span></p>
-      </div>
-
-    <div class="vp-badge">
-      <img src="icones/flamme-de-feu.png" alt="Sécurité Incendie">
-      <p>SÉCURITÉ FEU<br><span>Habilitation Incendie</span></p>
-      </div>
-
-    <div class="vp-badge">
-      <img src="icones/danger-biologique.png" alt="AIPR Réseaux">
-      <p>AIPR<br><span>Proximité Réseaux</span></p>
-      </div>
-
-    <div class="vp-badge">
-      <img src="icones/ambulance.png" alt="Sauveteur Secouriste SST">
-      <p>SÉCURITÉ SST<br><span>Sauvetage Secours</span></p>
-      </div>
-
-    <div class="vp-badge">
-      <img src="icones/danger-biologique.png" alt="Risques Plomb">
-      <p>RISQUES SPÉCIFIQUES<br><span>Plomb & Amiante</span></p>
+      <p class="vp-details">
+        Nos équipes détiennent les habilitations nécessaires pour intervenir dans les environnements les plus exigeants : 
+        <strong>Électricité NF C18-510</strong> (B0, H0, H0V, BS, BE, B1, B2, BR, BC), <strong>Levage</strong> (CACES R486, R482, R489) 
+        et <strong>Risques spécifiques</strong> (AIPR, Plomb, SST, Amiante SS4).
+      </p>
     </div>
 
-  </div>
-
-  <div class="vp-credits" style="width: 100%; font-size: 10px; opacity: 0.4; text-align: center; margin-top: 20px;">
-    <a href="https://www.flaticon.com/fr/icones-gratuites/fiche-dalimentation" title="fiche d'alimentation icônes">Design Circle</a>, 
-    <a href="https://www.flaticon.com/fr/icones-gratuites/grue" title="grue icônes">Freepik</a>, 
-    <a href="https://www.flaticon.com/fr/icones-gratuites/feu" title="feu icônes">Ehtisham Abid</a>, 
-    <a href="https://www.flaticon.com/fr/icones-gratuites/danger-biologique" title="danger biologique icônes">Kach</a>, 
-    <a href="https://www.flaticon.com/fr/icones-gratuites/ambulance" title="ambulance icônes">manshagraphics</a> - Flaticon
-  </div>
-</section>
-<!-- === Service ===-->
-      <section class="services">
-  <div class="services-text">
-    <h2>Nos Services</h2>
-    <p class="subtitle">Des solutions adaptés à tous.</p>
-    <br>
-  </div>
-  <div class="steps">
-    <div class="step entreprise">
-      <div class="circle">
-        <h3>Entreprise</h3>
-        <p class="title">Des solutions adaptées à votre activité</p>
-        <a href="Entreprise.html">Cliquez ici</a>
-      </div>
-    </div>
-    <div class="step mp">
-      <div class="circle">
-        <h3>Marché public</h3>
-        <p class="title">Des services fiables pour les projets publics</p>
-        <a href="Marchépublic.html">Cliquez ici</a>
-      </div>
-    </div>
-    <div class="step particulier">
-      <div class="circle">
-        <h3>Particulier</h3>
-        <p class="title">Des services simples pour votre quotidien</p>
-        <a href="particulier.html">Cliquez ici</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Réalisations -->
-<section id="realisations" class="container">
-<div class="realisations-head">
-<div>
-<h2>Travaux récents</h2>
-<p>Parcourez quelques chantiers typiques. Filtrez par catégorie pour aller à l’essentiel.</p>
-</div>
-<div class="filters" role="tablist" aria-label="Filtres de réalisations">
-<button class="chip" data-filter="all" aria-pressed="true" role="tab">Tout</button>
-<button class="chip" data-filter="sols" role="tab">Sols</button>
-<button class="chip" data-filter="anticorrosion" role="tab">Anticorrosion</button>
-<button class="chip" data-filter="autre" role="tab">Autre</button>
-</div>
-</div>
-
-<div class="grid" id="works">
-<a href="#popup-work1" class="work reveal" data-cat="sols">
-<img loading="lazy" src="img/1.png" alt="Marquage routier"/>
-<figcaption class="badge">Marquage routier</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work2" class="work reveal" data-cat="autre">
-<img loading="lazy" src="photos/IMG-20230304-WA0003(1).jpg" alt="Peinture pylones"/>
-<figcaption class="badge">Peinture Pylones</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work3" class="work reveal" data-cat="sols">
-<img loading="lazy" src="img/2.png" alt="Résines industrielles"/>
-<figcaption class="badge">Résines industrielles</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work4" class="work reveal" data-cat="anticorrosion">
-<img loading="lazy" src="img/3.png" alt="Peinture anticorrosion"/>
-<figcaption class="badge">Anticorrosion</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work5" class="work reveal" data-cat="sols">
-<img loading="lazy" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Moquettes"/>
-<figcaption class="badge">Moquettes</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work6" class="work reveal" data-cat="sols">
-<img loading="lazy" src="img/4.png" alt="tapis de pierre"/>
-<figcaption class="badge">tapis de pierre</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work7" class="work reveal" data-cat="autre">
-<img loading="lazy" src="img/5.png" alt="Travaux de batiment"/>
-<figcaption class="badge">Travaux de Bâtiment</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-<a href="#popup-work8" class="work reveal" data-cat="autre">
-<img loading="lazy" src="img/IMG-20251029-WA0026(1).jpg" alt="Peinture Candélabre"/>
-<figcaption class="badge">Peinture Candélabre</figcaption>
-<div class="card_overlay_v2">
-        <p>Cliquez pour en savoir plus.</p>
-      </div>
-</a>
-</div>
-
-<div id="pagination" class="pagination"> </div>
-
-<!-- POP UP-->
-<div id="popup-work1" class="popup_v2">
-    <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Marquage Routier & Signalétique</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="img/1.png" alt="Vue 1"></div>
-        <div class="workimg"><img src="img/1_autre_vue.png" alt="Vue 2"></div>
-        <div class="workimg"><img src="img/1_autre_vue2.png" alt="Vue 3"></div>
-        <div class="workimg"><img src="img/1_autre_vue3.png" alt="Vue 4"></div>
-        <div class="workimg"><img src="img/1_autre_vue4.png" alt="Vue 5"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong> Industrie, Logistique, Parkings</div>
-        <div class="detail_item"><strong>Clients :</strong> Public & Privé</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Résine Epoxy, Peinture Routière NF</div>
-        <div class="detail_item"><strong>Année :</strong> 2025</div>
-      </div>
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Réalisation du marquage complet d'une plateforme logistique de 5000m². Application de peinture certifiée haute performance pour trafic intense (NF).</p><br>
-        <p>Création de zones piétonnes sécurisées et de fléchages directionnels avec une résine à séchage ultra-rapide pour minimiser l'arrêt d'activité.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work2" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Rénovation Pylone Haute Tension</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="photos/IMG-20230304-WA0003(1).jpg" alt="Vue 1"></div>
-        <div class="workimg"><img src="photos/IMG-20230304-WA0004(1).jpg" alt="Vue 2"></div>
-        <div class="workimg"><img src="photos/IMG-20230304-WA0007(1).jpg" alt="Vue 3"></div>
-        <div class="workimg"><img src="photos/IMG-20230304-WA0008(1).jpg" alt="Vue 4"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-      <div class="project_details">
-        <div class="detail_item"><strong>Ville :</strong> Lyon, France</div>
-        <div class="detail_item"><strong>Client :</strong> EDF Réseau</div>
-        <div class="detail_item"><strong>Année :</strong> 2025</div>
-        <div class="detail_item"><strong>Type :</strong> Anticorrosion & Peinture</div>
-      </div>
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Traitement complet de la structure métallique avec application d'un primaire époxy et d'une finition polyuréthane pour une protection longue durée (C5-M).</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work3" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Résines Industrielles & Sols Techniques</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="img/2.png" alt="Sol en résine vue large"></div>
-        <div class="workimg"><img src="img/2_autre_vue1.png" alt="autre vue"></div>
-        <div class="workimg"><img src="img/2_autre_vue2.png" alt="autre vue 2"></div>
-        <div class="workimg"><img src="img/2_autre_vue.png" alt="autre vue 3"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong> Ateliers & Garages</div>
-        <div class="detail_item"><strong>Clients :</strong> Entreprises & Industries</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Époxy & Polyuréthane</div>
-        <div class="detail_item"><strong>Année :</strong> 2025</div>
-      </div>
-
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Application de revêtements de sol sans joint, offrant une étanchéité parfaite et une hygiène irréprochable. Nos solutions sont conçues pour supporter les contraintes mécaniques et chimiques les plus sévères.</p><br>
-        <p>Nous traitons la préparation des supports par ponçage diamant ou grenaillage pour garantir une adhérence maximale et une longévité accrue du revêtement.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work4" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Systèmes de Protection Anticorrosion</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="img/3.png" alt="vue 1"></div>
-        <div class="workimg"><img src="img/3_autre_vue.png" alt="autre vue"></div>
-        <div class="workimg"><img src="img/3_autre_vue1.png" alt="autre vue 1"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong>Industrie & Réseaux</div>
-        <div class="detail_item"><strong>Clients :</strong> Gestionnaires d'infrastructures</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Primaires Riches en Zinc & Polyuréthane</div>
-        <div class="detail_item"><strong>Protection :</strong> Milieux Corrosifs (C3, C4, C5)</div>
-      </div>
-
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Mise en œuvre de systèmes de peinture performants pour stopper et prévenir l'oxydation des structures métalliques. Nos interventions garantissent la pérennité des investissements contre les agressions climatiques et chimiques.</p><br>
-        <p>Nous maîtrisons les différentes étapes de préparation de surface (décapage, sablage, grenaillage) indispensables pour assurer l'adhérence et l'efficacité du système anticorrosion choisi.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work5" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Revêtements Textiles & Moquettes</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Pose de moquette"></div>
-        <div class="workimg"><img src="img/5-detail1.png" alt="Dalle de moquette"></div>
-        <div class="workimg"><img src="img/5-detail2.png" alt="Finition plinthe"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong> Bureaux, Tertiaire & Hôtellerie</div>
-        <div class="detail_item"><strong>Clients :</strong> Sièges sociaux & ERP</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Dalles plombantes & Moquette</div>
-        <div class="detail_item"><strong>Année :</strong> 2025</div>
-      </div>
-
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Fourniture et pose de revêtements textiles adaptés aux environnements de travail intensifs. Nos solutions privilégient le confort de marche et l'isolation acoustique pour améliorer le bien-être des collaborateurs.</p><br>
-        <p>Nous préconisons l'utilisation de dalles amovibles permettant un accès facile aux faux-planchers techniques et un remplacement rapide en cas d'usure localisée.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work6" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Moquette de Pierre & Revêtements Drainants</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="img/4.png" alt="Tapis de pierre escalier"></div>
-        <div class="workimg"><img src="img/4_autre_vue.png" alt="Tapis de pierre terrasse"></div>
-        <div class="workimg"><img src="img/4_autre_vue1.png" alt="Tapis de pierre autre terrasse"></div>
-        <div class="workimg"><img src="img/4_autre_vue2.png" alt="Tapis de pierre jardin"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong> Terrasses, Entourages de piscine & jardin</div>
-        <div class="detail_item"><strong>Clients :</strong> Particuliers & Professionnels</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Quartz ou Marbre & Résine Polyuréthane</div>
-        <div class="detail_item"><strong>Drainage :</strong> Structure perméable (anti-flaques)</div>
-      </div>
-
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Le tapis de pierre (ou moquette de pierre) combine l'élégance naturelle des granulats minéraux à la solidité d'une résine haute performance. C'est la solution idéale pour des surfaces extérieures durables, antidérapantes et sans entretien contraignant.</p><br>
-        <p>Grâce à sa porosité naturelle, ce revêtement permet l'évacuation immédiate des eaux de pluie, évitant ainsi la stagnation et garantissant une sécurité optimale aux abords des zones humides.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work7" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Travaux de Rénovation & Bâtiment</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="img/5.png" alt="avant et aprés"></div>
-        <div class="workimg"><img src="img/5_autre_vue.png" alt="autre vue"></div>
-        <div class="workimg"><img src="img/5_autre_vue1.png" alt="autre vue 2"></div>
-        <div class="workimg"><img src="img/5_autre_vue2.png" alt="autre vue 3"></div>
-        <div class="workimg"><img src="img/5_autre_vue3.png" alt="autre vue 4"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong> Résidentiel, Bureaux & Commerces</div>
-        <div class="detail_item"><strong>Clients :</strong> Copropriétés & Professionnels</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Enduits, Placo & Peintures intérieures</div>
-        <div class="detail_item"><strong>Finition :</strong> Qualité A+ & Respect des délais</div>
-      </div>
-
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Nous accompagnons nos clients dans leurs projets de rénovation globale ou partielle. Notre expertise couvre la préparation des supports, la mise en peinture et l'aménagement intérieur pour redonner vie à vos espaces.</p><br>
-        <p>Chaque chantier est mené avec une attention particulière portée à la propreté du site et à la précision des finitions, garantissant un résultat durable et esthétique conforme à vos attentes.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup-work8" class="popup_v2">
-  <div class="popup_v2__container">
-    <div class="popup_v2__header">
-      <h3 class="popup_v2__title">Entretien & Peinture de Candélabres</h3>
-      <a href="#realisations" class="popup_v2__close">&times;</a>
-    </div>
-
-    <div class="popup_v2__content">
-      <div class="workimg_slider">
-        <div class="workimg"><img src="img/IMG-20251029-WA0026(1).jpg" alt="Candélabre rénové"></div>
-        <div class="workimg"><img src="img/IMG-20251029-WA0078(1).jpg" alt="Candélabre rénové autre photo"></div>
-      </div>
-      <p class="slider_hint">← Glissez pour voir les photos →</p>
-
-      <div class="project_details">
-        <div class="detail_item"><strong>Secteurs :</strong> Espaces Publics & Parkings Privés</div>
-        <div class="detail_item"><strong>Clients :</strong> Municipalités & Copropriétés</div>
-        <div class="detail_item"><strong>Matériaux :</strong> Laques Polyuréthanes Haute Résistance</div>
-        <div class="detail_item"><strong>Année:</strong> 2025</div>
-      </div>
-
-      <div class="project_description">
-        <h4>Description du projet</h4>
-        <p>Remise en peinture complète de mâts d'éclairage public. Ce processus inclut un dégraissage minutieux, un ponçage des zones oxydées et l'application d'un système de peinture bi-composant garantissant une tenue exceptionnelle des teintes face aux rayons UV.</p><br>
-        <p>Nous intervenons dans le respect des contraintes de sécurité liées au domaine public, avec une signalisation adaptée pour protéger les usagers durant les phases d'application.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-
- <!-- JS -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const chips = document.querySelectorAll('.chip');
-  const works = Array.from(document.querySelectorAll('#works .work'));
-  const paginationContainer = document.getElementById('pagination');
-  
-  const itemsPerPage = 6; // MODIFIE ICI LE NOMBRE D'ÉLÉMENTS PAR PAGE
-  let currentPage = 1;
-  let filteredWorks = [...works];
-
-  function updateDisplay() {
-    // 1. Calcul des index
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-
-    // 2. Masquer tout et afficher uniquement la plage de la page active
-    works.forEach(w => w.classList.add('js-hidden'));
-    
-    filteredWorks.slice(startIndex, endIndex).forEach(w => {
-      w.classList.remove('js-hidden');
-    });
-
-    renderPagination();
-  }
-
-  function renderPagination() {
-    paginationContainer.innerHTML = '';
-    const pageCount = Math.ceil(filteredWorks.length / itemsPerPage);
-
-    if (pageCount <= 1) return; // Pas besoin de pagination si une seule page
-
-    for (let i = 1; i <= pageCount; i++) {
-      const btn = document.createElement('button');
-      btn.textContent = i;
-      btn.classList.add('page-btn');
-      if (i === currentPage) btn.classList.add('active');
+    <div class="vp-badges-container">
       
-      btn.addEventListener('click', () => {
-        currentPage = i;
-        updateDisplay();
-        // Optionnel : remonter en haut de la section
-        document.getElementById('realisations').scrollIntoView({ behavior: 'smooth' });
+      <div class="vp-badge">
+        <img src="icones/fiche-dalimentation.png" alt="Habilitation Électrique">
+        <p>ÉLECTRICITÉ<br><span>NF C18-510</span></p>
+        </div>
+
+      <div class="vp-badge">
+        <img src="icones/grue.png" alt="CACES Grue et Nacelle">
+        <p>LEVAGE & CACES<br><span>R486 / R482</span></p>
+        </div>
+
+      <div class="vp-badge">
+        <img src="icones/flamme-de-feu.png" alt="Sécurité Incendie">
+        <p>SÉCURITÉ FEU<br><span>Habilitation Incendie</span></p>
+        </div>
+
+      <div class="vp-badge">
+        <img src="icones/danger-biologique.png" alt="AIPR Réseaux">
+        <p>AIPR<br><span>Proximité Réseaux</span></p>
+        </div>
+
+      <div class="vp-badge">
+        <img src="icones/ambulance.png" alt="Sauveteur Secouriste SST">
+        <p>SÉCURITÉ SST<br><span>Sauvetage Secours</span></p>
+        </div>
+
+      <div class="vp-badge">
+        <img src="icones/danger-biologique.png" alt="Risques Plomb">
+        <p>RISQUES SPÉCIFIQUES<br><span>Plomb & Amiante</span></p>
+      </div>
+
+    </div>
+
+    <div class="vp-credits" style="width: 100%; font-size: 10px; opacity: 0.4; text-align: center; margin-top: 20px;">
+      <a href="https://www.flaticon.com/fr/icones-gratuites/fiche-dalimentation" title="fiche d'alimentation icônes">Design Circle</a>, 
+      <a href="https://www.flaticon.com/fr/icones-gratuites/grue" title="grue icônes">Freepik</a>, 
+      <a href="https://www.flaticon.com/fr/icones-gratuites/feu" title="feu icônes">Ehtisham Abid</a>, 
+      <a href="https://www.flaticon.com/fr/icones-gratuites/danger-biologique" title="danger biologique icônes">Kach</a>, 
+      <a href="https://www.flaticon.com/fr/icones-gratuites/ambulance" title="ambulance icônes">manshagraphics</a> - Flaticon
+    </div>
+  </section>
+  <!-- === Service ===-->
+  <section class="services">
+    <div class="services-text">
+      <h2>Nos Services</h2>
+      <p class="subtitle">Des solutions adaptés à tous.</p>
+      <br>
+    </div>
+    <div class="steps">
+      <div class="step entreprise">
+        <div class="circle">
+          <h3>Entreprise</h3>
+          <p class="title">Des solutions adaptées à votre activité</p>
+          <a href="Entreprise.html">Cliquez ici</a>
+        </div>
+      </div>
+      <div class="step mp">
+        <div class="circle">
+          <h3>Marché public</h3>
+          <p class="title">Des services fiables pour les projets publics</p>
+          <a href="Marchépublic.html">Cliquez ici</a>
+        </div>
+      </div>
+      <div class="step particulier">
+        <div class="circle">
+          <h3>Particulier</h3>
+          <p class="title">Des services simples pour votre quotidien</p>
+          <a href="particulier.html">Cliquez ici</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- == Réalisations == -->
+  <section id="realisations" class="container">
+    <div class="realisations-head">
+      <div>
+        <h2>Travaux récents</h2>
+        <p>Parcourez quelques chantiers typiques. Filtrez par catégorie pour aller à l’essentiel.</p>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filtres de réalisations">
+        <button class="chip" data-filter="all" aria-pressed="true" role="tab">Tout</button>
+        <button class="chip" data-filter="sols" role="tab">Sols</button>
+        <button class="chip" data-filter="anticorrosion" role="tab">Anticorrosion</button>
+        <button class="chip" data-filter="autre" role="tab">Autre</button>
+        <!-- Rajouter un autre bouton de filtrage ici-->
+        <!-- Bouton de filtrage 
+        <button class="chip" data-filter="Catégorie" role="tab">Catégorie</button>
+        -->
+      </div>
+    </div>
+
+    <!-- == Carte des réalisations == -->
+    <div class="grid" id="works">
+      <a href="#popup-work1" class="work reveal" data-cat="sols">
+        <img loading="lazy" src="img/1.png" alt="Marquage routier"/>
+        <figcaption class="badge">Marquage routier</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work2" class="work reveal" data-cat="autre">
+        <img loading="lazy" src="photos/IMG-20230304-WA0003(1).jpg" alt="Peinture pylones"/>
+        <figcaption class="badge">Peinture Pylones</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work3" class="work reveal" data-cat="sols">
+        <img loading="lazy" src="img/2.png" alt="Résines industrielles"/>
+        <figcaption class="badge">Résines industrielles</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work4" class="work reveal" data-cat="anticorrosion">
+        <img loading="lazy" src="img/3.png" alt="Peinture anticorrosion"/>
+        <figcaption class="badge">Anticorrosion</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work5" class="work reveal" data-cat="sols">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Moquettes"/>
+        <figcaption class="badge">Moquettes</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work6" class="work reveal" data-cat="sols">
+        <img loading="lazy" src="img/4.png" alt="tapis de pierre"/>
+        <figcaption class="badge">Tapis de pierre</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work7" class="work reveal" data-cat="autre">
+        <img loading="lazy" src="img/5.png" alt="Travaux de batiment"/>
+        <figcaption class="badge">Travaux de Bâtiment</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <a href="#popup-work8" class="work reveal" data-cat="autre">
+        <img loading="lazy" src="img/IMG-20251029-WA0026(1).jpg" alt="Peinture Candélabre"/>
+        <figcaption class="badge">Peinture Candélabre</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      <!-- Rajouter une autre carte de réalisation ici-->
+      <!--
+      <a href="#popup-work9" class="work reveal" data-cat="Catégorie"> (important ici d'incrémenter le #popup-work9 à chaque ajout de carte et d'ajouter la catégorie correspondant)
+        <img loading="lazy" src="img/IMG-20251029-WA0026(1).jpg" alt="titre"/>
+        <figcaption class="badge">titre</figcaption>
+        <div class="card_overlay_v2">
+          <p>Cliquez pour en savoir plus.</p>
+        </div>
+      </a>
+      -->
+    </div>
+
+    <div id="pagination" class="pagination"> </div>
+
+  <!-- == POP UP== -->
+    <div id="popup-work1" class="popup_v2">
+        <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Marquage Routier & Signalétique</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/1.png" alt="Vue 1"></div>
+            <div class="workimg"><img src="img/1_autre_vue.png" alt="Vue 2"></div>
+            <div class="workimg"><img src="img/1_autre_vue2.png" alt="Vue 3"></div>
+            <div class="workimg"><img src="img/1_autre_vue3.png" alt="Vue 4"></div>
+            <div class="workimg"><img src="img/1_autre_vue4.png" alt="Vue 5"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> Industrie, Logistique, Parkings</div>
+            <div class="detail_item"><strong>Clients :</strong> Public & Privé</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Résine Epoxy, Peinture Routière NF</div>
+            <div class="detail_item"><strong>Année :</strong> 2025</div>
+          </div>
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Réalisation du marquage complet d'une plateforme logistique de 5000m². Application de peinture certifiée haute performance pour trafic intense (NF).</p><br>
+            <p>Création de zones piétonnes sécurisées et de fléchages directionnels avec une résine à séchage ultra-rapide pour minimiser l'arrêt d'activité.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work2" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Rénovation Pylone Haute Tension</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="photos/IMG-20230304-WA0003(1).jpg" alt="Vue 1"></div>
+            <div class="workimg"><img src="photos/IMG-20230304-WA0004(1).jpg" alt="Vue 2"></div>
+            <div class="workimg"><img src="photos/IMG-20230304-WA0007(1).jpg" alt="Vue 3"></div>
+            <div class="workimg"><img src="photos/IMG-20230304-WA0008(1).jpg" alt="Vue 4"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+          <div class="project_details">
+            <div class="detail_item"><strong>Ville :</strong> Lyon, France</div>
+            <div class="detail_item"><strong>Client :</strong> EDF Réseau</div>
+            <div class="detail_item"><strong>Année :</strong> 2025</div>
+            <div class="detail_item"><strong>Type :</strong> Anticorrosion & Peinture</div>
+          </div>
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Traitement complet de la structure métallique avec application d'un primaire époxy et d'une finition polyuréthane pour une protection longue durée (C5-M).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work3" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Résines Industrielles & Sols Techniques</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/2.png" alt="Sol en résine vue large"></div>
+            <div class="workimg"><img src="img/2_autre_vue1.png" alt="autre vue"></div>
+            <div class="workimg"><img src="img/2_autre_vue2.png" alt="autre vue 2"></div>
+            <div class="workimg"><img src="img/2_autre_vue.png" alt="autre vue 3"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> Ateliers & Garages</div>
+            <div class="detail_item"><strong>Clients :</strong> Entreprises & Industries</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Époxy & Polyuréthane</div>
+            <div class="detail_item"><strong>Année :</strong> 2025</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Application de revêtements de sol sans joint, offrant une étanchéité parfaite et une hygiène irréprochable. Nos solutions sont conçues pour supporter les contraintes mécaniques et chimiques les plus sévères.</p><br>
+            <p>Nous traitons la préparation des supports par ponçage diamant ou grenaillage pour garantir une adhérence maximale et une longévité accrue du revêtement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work4" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Systèmes de Protection Anticorrosion</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/3.png" alt="vue 1"></div>
+            <div class="workimg"><img src="img/3_autre_vue.png" alt="autre vue"></div>
+            <div class="workimg"><img src="img/3_autre_vue1.png" alt="autre vue 1"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong>Industrie & Réseaux</div>
+            <div class="detail_item"><strong>Clients :</strong> Gestionnaires d'infrastructures</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Primaires Riches en Zinc & Polyuréthane</div>
+            <div class="detail_item"><strong>Protection :</strong> Milieux Corrosifs (C3, C4, C5)</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Mise en œuvre de systèmes de peinture performants pour stopper et prévenir l'oxydation des structures métalliques. Nos interventions garantissent la pérennité des investissements contre les agressions climatiques et chimiques.</p><br>
+            <p>Nous maîtrisons les différentes étapes de préparation de surface (décapage, sablage, grenaillage) indispensables pour assurer l'adhérence et l'efficacité du système anticorrosion choisi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work5" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Revêtements Textiles & Moquettes</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Pose de moquette"></div>
+            <div class="workimg"><img src="img/5-detail1.png" alt="Dalle de moquette"></div>
+            <div class="workimg"><img src="img/5-detail2.png" alt="Finition plinthe"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> Bureaux, Tertiaire & Hôtellerie</div>
+            <div class="detail_item"><strong>Clients :</strong> Sièges sociaux & ERP</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Dalles plombantes & Moquette</div>
+            <div class="detail_item"><strong>Année :</strong> 2025</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Fourniture et pose de revêtements textiles adaptés aux environnements de travail intensifs. Nos solutions privilégient le confort de marche et l'isolation acoustique pour améliorer le bien-être des collaborateurs.</p><br>
+            <p>Nous préconisons l'utilisation de dalles amovibles permettant un accès facile aux faux-planchers techniques et un remplacement rapide en cas d'usure localisée.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work6" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Moquette de Pierre & Revêtements Drainants</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/4.png" alt="Tapis de pierre escalier"></div>
+            <div class="workimg"><img src="img/4_autre_vue.png" alt="Tapis de pierre terrasse"></div>
+            <div class="workimg"><img src="img/4_autre_vue1.png" alt="Tapis de pierre autre terrasse"></div>
+            <div class="workimg"><img src="img/4_autre_vue2.png" alt="Tapis de pierre jardin"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> Terrasses, Entourages de piscine & jardin</div>
+            <div class="detail_item"><strong>Clients :</strong> Particuliers & Professionnels</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Quartz ou Marbre & Résine Polyuréthane</div>
+            <div class="detail_item"><strong>Drainage :</strong> Structure perméable (anti-flaques)</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Le tapis de pierre (ou moquette de pierre) combine l'élégance naturelle des granulats minéraux à la solidité d'une résine haute performance. C'est la solution idéale pour des surfaces extérieures durables, antidérapantes et sans entretien contraignant.</p><br>
+            <p>Grâce à sa porosité naturelle, ce revêtement permet l'évacuation immédiate des eaux de pluie, évitant ainsi la stagnation et garantissant une sécurité optimale aux abords des zones humides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work7" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Travaux de Rénovation & Bâtiment</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/5.png" alt="avant et aprés"></div>
+            <div class="workimg"><img src="img/5_autre_vue.png" alt="autre vue"></div>
+            <div class="workimg"><img src="img/5_autre_vue1.png" alt="autre vue 2"></div>
+            <div class="workimg"><img src="img/5_autre_vue2.png" alt="autre vue 3"></div>
+            <div class="workimg"><img src="img/5_autre_vue3.png" alt="autre vue 4"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> Résidentiel, Bureaux & Commerces</div>
+            <div class="detail_item"><strong>Clients :</strong> Copropriétés & Professionnels</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Enduits, Placo & Peintures intérieures</div>
+            <div class="detail_item"><strong>Finition :</strong> Qualité A+ & Respect des délais</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Nous accompagnons nos clients dans leurs projets de rénovation globale ou partielle. Notre expertise couvre la préparation des supports, la mise en peinture et l'aménagement intérieur pour redonner vie à vos espaces.</p><br>
+            <p>Chaque chantier est mené avec une attention particulière portée à la propreté du site et à la précision des finitions, garantissant un résultat durable et esthétique conforme à vos attentes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-work8" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">Entretien & Peinture de Candélabres</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/IMG-20251029-WA0026(1).jpg" alt="Candélabre rénové"></div>
+            <div class="workimg"><img src="img/IMG-20251029-WA0078(1).jpg" alt="Candélabre rénové autre photo"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> Espaces Publics & Parkings Privés</div>
+            <div class="detail_item"><strong>Clients :</strong> Municipalités & Copropriétés</div>
+            <div class="detail_item"><strong>Matériaux :</strong> Laques Polyuréthanes Haute Résistance</div>
+            <div class="detail_item"><strong>Année:</strong> 2025</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Remise en peinture complète de mâts d'éclairage public. Ce processus inclut un dégraissage minutieux, un ponçage des zones oxydées et l'application d'un système de peinture bi-composant garantissant une tenue exceptionnelle des teintes face aux rayons UV.</p><br>
+            <p>Nous intervenons dans le respect des contraintes de sécurité liées au domaine public, avec une signalisation adaptée pour protéger les usagers durant les phases d'application.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rajouter un Pop up ici-->
+      <!--
+      <div id="popup-work8" class="popup_v2">
+      <div class="popup_v2__container">
+        <div class="popup_v2__header">
+          <h3 class="popup_v2__title">TITRE</h3>
+          <a href="#realisations" class="popup_v2__close">&times;</a>
+        </div>
+
+        <div class="popup_v2__content">
+          <div class="workimg_slider">
+            <div class="workimg"><img src="img/IMG-20251029-WA0026(1).jpg" alt="décrire l'image"></div>
+            <div class="workimg"><img src="img/IMG-20251029-WA0078(1).jpg" alt="décrire l'image"></div>
+          </div>
+          <p class="slider_hint">← Glissez pour voir les photos →</p>
+
+          <div class="project_details">
+            <div class="detail_item"><strong>Secteurs :</strong> ***</div>
+            <div class="detail_item"><strong>Clients :</strong> ***</div>
+            <div class="detail_item"><strong>Matériaux :</strong> ***</div>
+            <div class="detail_item"><strong>Année:</strong> ****</div>
+          </div>
+
+          <div class="project_description">
+            <h4>Description du projet</h4>
+            <p>Décrire le projet (ici c'est le premier paragraphe).</p><br>
+            <p>Décrire le projet (ici c'est le deuxieme paragraphe)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      -->
+  </section>
+
+  <!-- JS pour la section réalisation-->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const chips = document.querySelectorAll('.chip');
+    const works = Array.from(document.querySelectorAll('#works .work'));
+    const paginationContainer = document.getElementById('pagination');
+    
+    const itemsPerPage = 6; // MODIFIE ICI LE NOMBRE D'ÉLÉMENTS PAR PAGE
+    let currentPage = 1;
+    let filteredWorks = [...works];
+
+    function updateDisplay() {
+      // 1. Calcul des index
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+
+      // 2. Masquer tout et afficher uniquement la plage de la page active
+      works.forEach(w => w.classList.add('js-hidden'));
+      
+      filteredWorks.slice(startIndex, endIndex).forEach(w => {
+        w.classList.remove('js-hidden');
       });
-      
-      paginationContainer.appendChild(btn);
+
+      renderPagination();
     }
-  }
 
-  // Gestion des filtres
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      // Style des chips
-      chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
-      chip.setAttribute('aria-pressed', 'true');
+    function renderPagination() {
+      paginationContainer.innerHTML = '';
+      const pageCount = Math.ceil(filteredWorks.length / itemsPerPage);
 
-      const filter = chip.dataset.filter;
-      
-      // Filtrage des données
-      filteredWorks = works.filter(w => {
-        return filter === 'all' || w.dataset.cat === filter;
+      if (pageCount <= 1) return; // Pas besoin de pagination si une seule page
+
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.classList.add('page-btn');
+        if (i === currentPage) btn.classList.add('active');
+        
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          updateDisplay();
+          // Optionnel : remonter en haut de la section
+          document.getElementById('realisations').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        paginationContainer.appendChild(btn);
+      }
+    }
+
+    // Gestion des filtres
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        // Style des chips
+        chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+        chip.setAttribute('aria-pressed', 'true');
+
+        const filter = chip.dataset.filter;
+        
+        // Filtrage des données
+        filteredWorks = works.filter(w => {
+          return filter === 'all' || w.dataset.cat === filter;
+        });
+
+        currentPage = 1; // Reset à la première page lors d'un filtrage
+        updateDisplay();
       });
-
-      currentPage = 1; // Reset à la première page lors d'un filtrage
-      updateDisplay();
     });
+
+    // Initialisation
+    updateDisplay();
   });
-
-  // Initialisation
-  updateDisplay();
-});
-</script>
-
+  </script>
 
   <!-- ===== Partenaires ===== -->
-<section id="partners" class="partners-section">
-  <div class="partners-head">
-    <h2>Nos Partenaires</h2>
-    <p>Nous collaborons avec des acteurs de confiance pour garantir la qualité de nos services.</p>
-  </div>
-
-  <div class="partners-carousel">
-    <div class="carousel-track">
-    <div class="partner"><img src="Partenaire/Logo_Vinci.png" alt="Partenaire 1"></div>
-    <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Partenaire 2"></div>
-    <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Partenaire 3"></div>
-    <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Partenaire 4"></div>
-    <div class="partner"><img src="Partenaire/Logo_de_Montigny-lès-Metz.png" alt="Partenaire 5"></div>
-    <div class="partner"><img src="Partenaire/logo edf.png" alt="Partenaire 6"></div>
-    <div class="partner"><img src="Partenaire/RTE_logo.png" alt="Partenaire 7"></div>
-    <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Partenaire 8"></div>
-    <div class="partner"><img src="Partenaire/Logo_enedis.png" alt="Partenaire 9"></div>
-    <div class="partner"><img src="Partenaire/eiffage-logo-1.jpg" alt="Partenaire 10"></div>
-    <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Partenaire 3"></div>
-    <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Partenaire 4"></div>
-  </div>
-</section>
-
-
+  <section id="partners" class="partners-section">
+    <div class="partners-head">
+      <h2>Nos Partenaires</h2>
+      <p>Nous collaborons avec des acteurs de confiance pour garantir la qualité de nos services.</p>
+    </div>
+    <!-- Carousel avec tout les logo-->
+    <div class="partners-carousel">
+      <div class="carousel-track">
+      <div class="partner"><img src="Partenaire/Logo_Vinci.png" alt="Logo Vinci"></div>
+      <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Veolia Logo"></div>
+      <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Ville Metz"></div>
+      <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Electricité de Strasbourg"></div>
+      <div class="partner"><img src="Partenaire/Logo_de_Montigny-lès-Metz.png" alt="Montigny-lès-Metz"></div>
+      <div class="partner"><img src="Partenaire/logo edf.png" alt="Edf"></div>
+      <div class="partner"><img src="Partenaire/RTE_logo.png" alt="RTE"></div>
+      <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Veolia Logo"></div>
+      <div class="partner"><img src="Partenaire/Logo_enedis.png" alt="Enedis"></div>
+      <div class="partner"><img src="Partenaire/eiffage-logo-1.jpg" alt="eiffage"></div>
+      <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Electricité de Strasbourg"></div>
+      <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Ville Metz"></div>
+      <!-- Rajouter un partenaire ici-->
+      <!--<div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="écrire le partenaire ici"></div>-->
+    </div>
+  </section>
+</body>
 <!-- Contact -->
 <section id="contact" class="container">
   <div class="section-head">
@@ -739,20 +780,18 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 </main>
-
 <!-- Footer -->
 <footer>
-<div class="container footer-grid">
-<div>
-<div class="brand" style="margin: 12px 0 6px;">
-<span class="logo" aria-hidden="true">
-</span>
-<span>ValdenCo – Peinture Plus</span>
-</div>
-<p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
-</div>
-<div>
-<p class="small">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="margin: 12px 0 6px;">
+        <span class="logo" aria-hidden="true"></span>
+        <span>ValdenCo – Peinture Plus</span>
+      </div>
+      <p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
+    </div>
+    <div>
+      <p class="small">
         <h4>Coordonnées</h4>
         <p><strong>ValdenCo Peinture Plus</strong></p>
         <address style="font-style: normal; margin-bottom: 20px;">
@@ -761,33 +800,36 @@ form.addEventListener('submit', function(e) {
         </address>
         <p><strong>Téléphone :</strong> 06 98 79 10 23</p>
         <p><strong>Email :</strong> peintureplus@ymail.com</p>
-  </p>
-</div>
-<div>
-<h4>Navigation</h4>
-<p class="small">
-  <a href="#services">Services</a>
-  <br><a href="#realisations">Réalisations</a>
-  <br><a href="#partenaires">Partenaires</a>
-  <br><a href="#contact">Contact</a></p>
-</div>
-<div>
-    <h4>Juridique</h4>
-    <ul class="footer-links">
-      <li><a href="FAQ.html">Questions Fréquentes (FAQ)</a></li>
-      <li><a href="mentions-legales.html">Mentions Légales</a></li>
-      <li><a href="confidentialite.html">Confidentialité (RGPD)</a></li>
-      <li><a href="cgv.html">Conditions Générales de Vente</a></li>
-    </ul>
-</div>
-<div>
-<h4>Réseaux</h4>
-<p class="small">
-  <a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a><br>
-  <a href="#">Facebook</a></p>
-</div>
-</div>
-<div class="container footnote">
-© <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
-</div>
+      </p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <p class="small">
+        <a href="#services">Services</a>
+        <br><a href="#realisations">Réalisations</a>
+        <br><a href="#partenaires">Partenaires</a>
+        <br><a href="#contact">Contact</a>
+      </p>
+    </div>
+    <div>
+      <h4>Juridique</h4>
+      <ul class="footer-links">
+        <li><a href="FAQ.html">Questions Fréquentes (FAQ)</a></li>
+        <li><a href="mentions-legales.html">Mentions Légales</a></li>
+        <li><a href="confidentialite.html">Confidentialité (RGPD)</a></li>
+        <li><a href="cgv.html">Conditions Générales de Vente</a></li>
+      </ul>
+    </div>
+    <div> 
+      <h4>Réseaux</h4>
+      <p class="small">
+        <a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a><br>
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </div>
+  <div class="container footnote">
+    © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
+  </div>
 </footer>
+</html>

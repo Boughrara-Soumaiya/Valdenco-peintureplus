@@ -1,64 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
-<meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
-<meta name="theme-color" content="#0f766e" />
-<link rel="icon" href="logo/logomark 1.png" />
-<link rel="stylesheet" href="entreprise.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ValdenCo – Peinture Plus | Protection de surface & Résines de sol</title>
+  <meta name="description" content="ValdenCo – Peinture Plus : spécialiste en peintures industrielles, résines de sol époxy, anticorrosion, marquage et préparation des supports à Forbach." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="logo/logomark 1.png" />
+  <link rel="stylesheet" href="CSS/service.css" />
 </head>
 <body>
-    <!-- == HEADER ==-->
- <header>
-  <a href="index.html" class="logo-link">
-    <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
-  </a>
-
-  <!-- Logo Mobile -->
-  <a href="index.html" class="logo-link">
-    <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
-  </a>
-  <!-- Burger -->
-  <div class="burger" id="burger">
-    <div></div><div></div><div></div>
-  </div>
-
- <!-- Navigation -->
-  <nav id="nav">
-    <ul>
-      <li>
-        <a href="#">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="Entreprise.html">Entreprise</a>
-          <a href="Marchépublic.html">Marché public</a>
-          <a href="particulier.html">Particulier</a>
-        </div>
-      </li>
-      <li><a href="nostravaux.html">Nos travaux</a></li>
-      <li><a href="partenaire.html">Partenaires</a></li>
-      <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
-    </ul>
-  </nav>
-  
-  <!-- Google Translate -->
-  <div id="google_translate_element" class="translate-widget"></div>
-</header>
-
-<!-- Script menu burger-->
-<script>
+  <!-- == HEADER ==-->
+  <header>
+  <!-- Logo Desktop = Logo pour grand écran -->
+    <a href="index.html" class="logo-link">
+      <img src="logo/logo horizontale 1.png" alt="Logo" class="logo-desktop">
+    </a>
+    <!-- Logo Mobile -->
+    <a href="index.html" class="logo-link">
+      <img src="logo/logomark 1.png" alt="Logo Mobile" class="logo-mobile">
+    </a>
+    <!-- Burger -->
+    <div class="burger" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="nav"> 
+     <ul>
+        <li>
+          <a href="#">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="Entreprise.html">Entreprise</a>
+            <a href="Marchépublic.html">Marché public</a>
+            <a href="particulier.html">Particulier</a>
+          </div>
+        </li>
+        <li><a href="nostravaux.html">Nos travaux</a></li>
+        <li><a href="partenaire.html">Partenaires</a></li>
+        <li><a href="index.html#contact" class="btn-devis">Obtenir un devis</a></li>
+      </ul>
+    </nav>
+    <!-- Google Translate -->
+    <div id="google_translate_element" class="translate-widget"></div>
+  </header>
+  <!-- Script menu burger-->
+  <script>
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
 
   burger.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
-</script>
-
-
-<!-- Script Google Translate -->
-<script type="text/javascript">
+  </script>
+  <!-- Script Google Translate -->
+  <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
       {
@@ -70,20 +65,20 @@
       'google_translate_element'
     );
   }
-</script>
-  
+  </script>
+  <!-- Script Affichage du Google Translate -->
   <script type="text/javascript" 
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
   </script>
 
-<!-- INTRO-->
+  <!-- == HOME == -->
   <section class="home">
-  <h1>Entreprise </h1>
-  <p>Nous accompagnons les entreprises pour la rénovation et l'embellissement de leurs locux professionnels.</p>
-</section>
+    <h1>Entreprise </h1>
+    <p>Nous accompagnons les entreprises pour la rénovation et l'embellissement de leurs locux professionnels.</p>
+  </section>
 
 
-  <!-- Pourquoi nous choisir -->
+  <!-- == Pourquoi nous choisir ==  -->
   <section id="pourquoi-nous-choisir">
     <div class="container">
       <h2>Pourquoi nous choisir ?</h2>
@@ -98,33 +93,40 @@
     </div>
   </section>
 
-  <!-- Nos services -->
+  <!-- == Nos services == -->
   <section id="services">
-  <div class="container services-wrapper">
-    <div class="services-intro">
-      <h2>Les services que nous vous proposons</h2>
-    </div>
+    <div class="container services-wrapper">
+      <div class="services-intro">
+        <h2>Les services que nous vous proposons</h2>
+      </div>
     
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Peinture de bureaux</h3>
-        <p>Optimisez vos espaces professionnels avec des peintures adaptées et durables.</p>
-      </div>
-      <div class="service-card">
-        <h3>Façades et extérieurs</h3>
-        <p>Nous rénovons vos façades pour un rendu esthétique et résistant aux intempéries.</p>
-      </div>
-      <div class="service-card">
-        <h3>Espaces commerciaux</h3>
-        <p>Transformez vos boutiques ou showrooms avec des finitions modernes et attractives.</p>
-      </div>
-      <div class="service-card">
-        <h3>Aménagements spéciaux</h3>
-        <p>Peinture décorative, signalétique ou effets spéciaux pour vos espaces professionnels.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Peinture de bureaux</h3>
+          <p>Optimisez vos espaces professionnels avec des peintures adaptées et durables.</p>
+        </div>
+        <div class="service-card">
+          <h3>Façades et extérieurs</h3>
+          <p>Nous rénovons vos façades pour un rendu esthétique et résistant aux intempéries.</p>
+        </div>
+        <div class="service-card">
+          <h3>Espaces commerciaux</h3>
+          <p>Transformez vos boutiques ou showrooms avec des finitions modernes et attractives.</p>
+        </div>
+        <div class="service-card">
+          <h3>Aménagements spéciaux</h3>
+          <p>Peinture décorative, signalétique ou effets spéciaux pour vos espaces professionnels.</p>
+        </div>
+        <!-- Rajouter un service ici-->
+        <!--
+        <div class="service-card">
+          <h3>Titre</h3>
+          <p>Petit descriptif</p>
+        </div>
+        -->
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Travaux réalisés -->
   <section id="travaux">
@@ -135,46 +137,118 @@
         <div class="travail-card">
           <h4>Bureaux - Avant/Après</h4>
           <div class="travail-images">
-            <img src="images/bureau-avant.jpg" alt="Bureau avant">
-            <img src="images/bureau-apres.jpg" alt="Bureau après">
+            <img src="img/Travaux_avant.png" alt="Avant">
+            <img src="img/TRAVAUX_APRES.png" alt="Après">
           </div>
         </div>
         <div class="travail-card">
           <h4>Façade Commerce - Avant/Après</h4>
           <div class="travail-images">
-            <img src="images/facade-avant.jpg" alt="Façade avant">
-            <img src="images/facade-apres.jpg" alt="Façade après">
+            <img src="img/travaux2_avant.png" alt="Façade avant">
+            <img src="img/travaux2_apres.png" alt="Façade après">
+          </div>
+        </div>
+        <div class="travail-card">
+          <h4>Sol - Avant/Après</h4>
+          <div class="travail-images">
+            <img src="img/avant.png" alt="Avant">
+            <img src="img/apres.png" alt="Après">
           </div>
         </div>
         <!-- Ajouter d'autres travaux ici -->
+         <!-- Modèle travaux
+         <div class="travail-card">
+          <h4>Titre - Avant/Après</h4>
+          <div class="travail-images">
+            <img src="images/titre-avant.jpg" alt="titre avant">
+            <img src="images/titre-apres.jpg" alt="titre après">
+          </div>
+          </div>
+        -->
       </div>
     </div>
+    <div id="pagination" class="pagination"> </div>
   </section>
 
-   <!-- ===== Partenaires ===== -->
-<section id="partners" class="partners-section">
-  <div class="partners-head">
-    <h2>Nos Partenaires</h2>
-    <p>Nous collaborons avec des acteurs de confiance pour garantir la qualité de nos services.</p>
-  </div>
+   <!-- JS pour la section travaux-->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // CORRECTION : On cible les éléments RÉELS du HTML ci-dessus
+    const works = Array.from(document.querySelectorAll('.travail-card'));
+    const paginationContainer = document.getElementById('pagination');
+    
+    const itemsPerPage = 2; // Seuil de déclenchement
+    let currentPage = 1;
 
-  <div class="partners-carousel">
-    <div class="carousel-track">
-    <div class="partner"><img src="Partenaire/Logo_Vinci.png" alt="Partenaire 1"></div>
-    <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Partenaire 2"></div>
-    <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Partenaire 3"></div>
-    <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Partenaire 4"></div>
-    <div class="partner"><img src="Partenaire/Logo_de_Montigny-lès-Metz.png" alt="Partenaire 5"></div>
-    <div class="partner"><img src="Partenaire/logo edf.png" alt="Partenaire 6"></div>
-    <div class="partner"><img src="Partenaire/RTE_logo.png" alt="Partenaire 7"></div>
-    <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Partenaire 8"></div>
-    <div class="partner"><img src="Partenaire/Logo_enedis.png" alt="Partenaire 9"></div>
-    <div class="partner"><img src="Partenaire/eiffage-logo-1.jpg" alt="Partenaire 10"></div>
-    <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Partenaire 3"></div>
-    <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Partenaire 4"></div>
-  </div>
-</section>
+    function updateDisplay() {
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
 
+      // On cache tout, puis on affiche la tranche sélectionnée
+      works.forEach((work, index) => {
+        if (index >= startIndex && index < endIndex) {
+          work.style.display = 'block'; // Affiche
+        } else {
+          work.style.display = 'none';  // Cache
+        }
+      });
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      paginationContainer.innerHTML = '';
+      const pageCount = Math.ceil(works.length / itemsPerPage);
+
+      if (pageCount <= 1) return;
+
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.classList.add('page-btn');
+        if (i === currentPage) btn.classList.add('active');
+        
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          updateDisplay();
+          // Remonte doucement vers le titre de la section
+          document.getElementById('travaux').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        paginationContainer.appendChild(btn);
+      }
+    }
+
+    updateDisplay();
+  });
+  </script>
+
+  <!-- ===== Partenaires ===== -->
+  <section id="partners" class="partners-section">
+    <div class="partners-head">
+      <h2>Nos Partenaires</h2>
+      <p>Nous collaborons avec des acteurs de confiance pour garantir la qualité de nos services.</p>
+    </div>
+    <!-- Carousel avec tout les logo-->
+    <div class="partners-carousel">
+      <div class="carousel-track">
+      <div class="partner"><img src="Partenaire/Logo_Vinci.png" alt="Logo Vinci"></div>
+      <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Veolia Logo"></div>
+      <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Ville Metz"></div>
+      <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Electricité de Strasbourg"></div>
+      <div class="partner"><img src="Partenaire/Logo_de_Montigny-lès-Metz.png" alt="Montigny-lès-Metz"></div>
+      <div class="partner"><img src="Partenaire/logo edf.png" alt="Edf"></div>
+      <div class="partner"><img src="Partenaire/RTE_logo.png" alt="RTE"></div>
+      <div class="partner"><img src="Partenaire/Veolia_logo.png" alt="Veolia Logo"></div>
+      <div class="partner"><img src="Partenaire/Logo_enedis.png" alt="Enedis"></div>
+      <div class="partner"><img src="Partenaire/eiffage-logo-1.jpg" alt="eiffage"></div>
+      <div class="partner"><img src="Partenaire/Logo_Electricté_de_Strasbourg.png" alt="Electricité de Strasbourg"></div>
+      <div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="Ville Metz"></div>
+      <!-- Rajouter un partenaire ici-->
+      <!--<div class="partner"><img src="Partenaire/Logo_Ville_Metz.png" alt="écrire le partenaire ici"></div>-->
+    </div>
+  </section>
+</body>
 <!-- Contact -->
 <section id="contact" class="container">
   <div class="section-head">
@@ -222,7 +296,7 @@
         <input type="checkbox" id="rgpd" name="rgpd" required style="width: 18px; height: 18px; margin-top: 3px; cursor: pointer;">
         <label for="rgpd" style="font-size: 0.85rem; font-weight: normal; cursor: pointer; color: #444; line-height: 1.4;"> 
           J'ai pris connaissance et j'accepte que mes données soient traitées pour répondre à ma demande conformément à la 
-          <a href="politique-confidentialite.html" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: underline;">
+          <a href="confidentialite.html" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: underline;">
             Politique de confidentialité
           </a>.
         </label>
@@ -298,20 +372,18 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 </main>
-
 <!-- Footer -->
 <footer>
-<div class="container footer-grid">
-<div>
-<div class="brand" style="margin: 12px 0 6px;">
-<span class="logo" aria-hidden="true">
-</span>
-<span>ValdenCo – Peinture Plus</span>
-</div>
-<p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
-</div>
-<div>
-<p class="small">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand" style="margin: 12px 0 6px;">
+        <span class="logo" aria-hidden="true"></span>
+        <span>ValdenCo – Peinture Plus</span>
+      </div>
+      <p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
+    </div>
+    <div>
+      <p class="small">
         <h4>Coordonnées</h4>
         <p><strong>ValdenCo Peinture Plus</strong></p>
         <address style="font-style: normal; margin-bottom: 20px;">
@@ -320,33 +392,36 @@ form.addEventListener('submit', function(e) {
         </address>
         <p><strong>Téléphone :</strong> 06 98 79 10 23</p>
         <p><strong>Email :</strong> peintureplus@ymail.com</p>
-  </p>
-</div>
-<div>
-<h4>Navigation</h4>
-<p class="small">
-  <a href="#services">Services</a>
-  <br><a href="#realisations">Réalisations</a>
-  <br><a href="#partenaires">Partenaires</a>
-  <br><a href="#contact">Contact</a></p>
-</div>
-<div>
-    <h4>Juridique</h4>
-    <ul class="footer-links">
-      <li><a href="FAQ.html">Questions Fréquentes (FAQ)</a></li>
-      <li><a href="mentions-legales.html">Mentions Légales</a></li>
-      <li><a href="confidentialite.html">Confidentialité (RGPD)</a></li>
-      <li><a href="cgv.html">Conditions Générales de Vente</a></li>
-    </ul>
-</div>
-<div>
-<h4>Réseaux</h4>
-<p class="small">
-  <a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a><br>
-  <a href="#">Facebook</a></p>
-</div>
-</div>
-<div class="container footnote">
-© <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
-</div>
+      </p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <p class="small">
+        <a href="index.html#services">Services</a>
+        <br><a href="index.html#realisations">Réalisations</a>
+        <br><a href="#partenaires">Partenaires</a>
+        <br><a href="#contact">Contact</a>
+      </p>
+    </div>
+    <div>
+      <h4>Juridique</h4>
+      <ul class="footer-links">
+        <li><a href="FAQ.html">Questions Fréquentes (FAQ)</a></li>
+        <li><a href="mentions-legales.html">Mentions Légales</a></li>
+        <li><a href="confidentialite.html">Confidentialité (RGPD)</a></li>
+        <li><a href="cgv.html">Conditions Générales de Vente</a></li>
+      </ul>
+    </div>
+    <div> 
+      <h4>Réseaux</h4>
+      <p class="small">
+        <a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a><br>
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </div>
+  <div class="container footnote">
+    © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
+  </div>
 </footer>
+</html>

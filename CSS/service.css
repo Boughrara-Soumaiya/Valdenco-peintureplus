@@ -1,19 +1,21 @@
- :root {
-      --primary: #12598C;
-      --secondary: #6EA1C4;
-      --black: #000000;
-      --gray: #C2C2C2;
-    }
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==========================================
+   BLOC : RESET & VARIABLES
+   ========================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #02598C; --secondary: #6EA1C4;
+  --black: #1D1D1B; --gray: #C3C2C2;
+  --font-titles: "Neue Haas Grotesk Text Pro", sans-serif;
+  --font-body: "Arial", sans-serif;
 }
 
-/* Taille de base du texte */
-html {
-  font-size: 16px; /* 1rem = 16px partout */
-  -webkit-text-size-adjust: 100%; /* évite que Safari agrandisse le texte */
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+  font-size: 16px; 
+  -webkit-text-size-adjust: 100%; 
 }
 
 body {
@@ -23,7 +25,10 @@ body {
   background: linear-gradient(135deg, #f5f7fa 0%, #dce6ee 100%);
 }
 
-    /* HEADER */
+/* ==========================================
+   BLOC : HEADER
+   ========================================== */
+
 header {
   background: white;
   color: var(--primary);
@@ -50,8 +55,8 @@ header {
 .logo-mobile { display: none; }
 
 .logo-link {
-  display: inline-block; /* ne modifie pas le flux */
-  text-decoration: none; /* supprime le soulignement du lien */
+  display: inline-block; 
+  text-decoration: none; 
 }
 .logo-link:hover img {
   transform: scale(1.05);
@@ -62,7 +67,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  margin-left: auto; /* pousse le nav à droite */
+  margin-left: auto; 
 }
 
 nav ul {
@@ -137,7 +142,7 @@ li:hover .dropdown-content {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  margin-left: auto; /* pousse le burger à droite */
+  margin-left: auto; 
 }
 
 .burger div {
@@ -181,8 +186,8 @@ li:hover .dropdown-content {
   .logo-desktop { display: none; }
   .logo-mobile { display: block; max-height: 50px; }
 
-  nav { margin-left: auto; }       /* menu à droite */
-  .burger { margin-left: auto; }   /* burger à droite */
+  nav { margin-left: auto; }       
+  .burger { margin-left: auto; }   
 }
 
 @media (max-width: 768px) {
@@ -283,153 +288,322 @@ li:hover .dropdown-content {
     padding: 0.6rem;
   }
 
-  /* Menu burger plus petit */
+  
   .burger div {
     width: 20px;
     height: 2px;
   }
 
-  /* Assurer que le menu couvre bien l'écran */
+
   nav {
     background: white;
   }
 }
 
-/* Home Section */
-#home {
-    margin-top: 80px;
-    background: var(--primary); /* Couleur pleine = Solidité */
+/* ==========================================
+   BLOC : HOME
+   ========================================== */
+
+.home {
+    margin-top: 80px; 
+    background: var(--primary);
     color: white;
-    padding: 80px 10%;
+    padding: 60px 5%; 
     text-align: left;
-    border-radius: 0; /* On enlève les arrondis */
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0; 
 }
 
-#home h1 {
-    font-size: 3rem;
+.home h1 {
+
+    font-size: clamp(2rem, 8vw, 3rem); 
     font-weight: bold;
-    font-style: italic; /* Ta signature */
+    font-style: italic;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    line-height: 1.1;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 
-/* Travaux section */
-#travaux {
-    padding: 80px 5%;
-    background: #ffffff;
+@media (max-width: 480px) {
+    .home {
+        padding: 40px 5%;
+    }
 }
 
-#travaux h2 {
+@media (max-width: 768px) {
+  .home, 
+  #pourquoi-nous-choisir, 
+  #services, 
+  #travaux, 
+  #contact {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .home h1 {
+    font-size: 2rem; 
+  }
+
+  .travaux-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .services-intro h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==========================================
+   BLOC : POURQUOI NOUS CHOISIR
+   ========================================== */
+
+#pourquoi-nous-choisir {
+    padding: 60px 10%;
+    background: white;
+    border-top: 5px solid var(--secondary);
+}
+
+#pourquoi-nous-choisir h2 {
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#pourquoi-nous-choisir ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#pourquoi-nous-choisir li {
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid var(--primary);
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* ==========================================
+   BLOC : SERVICES
+   ========================================== */
+
+#services {
+    padding: 60px 5%; 
+    background-color: #f4f7f9;
+}
+
+.services-wrapper {
+    display: flex;
+    gap: 40px; 
+    align-items: center; 
+    max-width: 1100px; 
+    margin: 0 auto;
+}
+
+.services-intro {
+    flex: 0 0 30%; 
+}
+
+.services-intro h2 {
+    text-align: left;
     color: var(--primary);
     font-size: 1.8rem;
     font-weight: 800;
     font-style: italic;
     text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
     border-left: 5px solid var(--secondary);
     padding-left: 15px;
-    margin-bottom: 3rem;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
+.services-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
 }
-/* NOUVEAU STYLE INDUSTRIEL */
-.card {
+
+.service-card {
+    background: white;
+    padding: 25px; 
+    border: 1px solid #ddd;
+    border-radius: 0;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card h3 {
+    color: var(--primary);
+    font-size: 1rem; 
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.service-card p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-size: 0.85rem; 
+    line-height: 1.4;
+}
+
+/* --- INTERACTION --- */
+.service-card:hover {
+    background: white; 
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.service-card:hover h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.service-card:hover p {
+    opacity: 1;
+    max-height: 80px;
+    margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .services-wrapper { 
+        flex-direction: column; 
+    }
+    .services-intro { 
+        flex: none; 
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-intro h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-wrapper { flex-direction: column; align-items: flex-start; }
+    .services-intro { flex: 1; margin-bottom: 30px; }
+    .services-grid { width: 100%; }
+}
+
+/* ==========================================
+   BLOC : TRAVAUX 
+   ========================================== */
+
+#travaux {
+    padding: 80px 10%;
+    background: white;
+}
+
+.travaux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.travail-card {
+    border: 1px solid #eee;
+    padding: 15px;
+}
+
+.travail-card h4 {
+    margin-bottom: 15px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.travail-images {
+    display: flex;
+    gap: 10px;
+}
+
+.travail-images img {
+    width: 50%;
+    border-radius: 0; 
+    object-fit: cover;
+}
+/*PAGINATION*/
+.pagination {
   display: flex;
-  flex-direction: column; /* On oublie le row à 40%, en Swiper le vertical est plus pro */
-  background: white;
-  border-radius: 0; /* CARRÉ : Obligatoire pour ton style */
-  border: 1px solid #eee;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-  height: 100%;
-  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  width: 100%; 
+  flex-wrap: wrap; 
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  height: 250px; /* Hauteur fixe pour que toutes les cartes soient alignées */
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.card-content {
-  padding: 1.5rem;
-  background: white;
-}
-
-.card-content h3 {
+.page-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px; 
+  border: 1px solid #ddd;
+  background: #fff;
   color: var(--primary);
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-style: italic; /* Ta signature */
-  font-weight: 800;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-.card-content p {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-/* BOUTON CARRÉ ET SOLIDE */
-.card-content .btn {
-  display: block;
-  width: 100%; /* Largeur pleine pour l'aspect pro */
-  text-align: center;
+.page-btn.active {
   background: var(--primary);
   color: white;
-  padding: 0.8rem;
-  border-radius: 0; /* CARRÉ */
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: background 0.3s;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 992px) {
+    #travaux {
+        padding: 60px 5%; /* On réduit les marges sur tablette */
+    }
+    
+    .travaux-grid {
+        gap: 20px;
+    }
 }
 
-.card-content .btn:hover {
-  background: var(--secondary);
+@media (max-width: 600px) {
+    .travaux-grid {
+        /* Force une seule colonne sur smartphone */
+        grid-template-columns: 1fr; 
+    }
+
+    .travail-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .page-btn {
+        width: 40px;
+        height: 40px;
+    }
 }
+/* ==========================================
+   BLOC : PARTNERS
+   ========================================== */
 
-/* Swiper */
-.swiper {
-  padding: 2rem 0;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--primary);
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--primary);
-}
-
-/* Responsive : petits écrans */
-@media(max-width: 900px){
-  .card {
-    flex-direction: column; /* image au-dessus du texte */
-  }
-  .card img {
-    width: 100%;
-    height: 200px; /* ajuster la hauteur si nécessaire */
-  }
-}
-
-
-/* ===== Partenaires ===== */
 .partners-section {
   padding: 6rem 2rem;
   background-color: #f9f9f9;
@@ -485,7 +659,7 @@ li:hover .dropdown-content {
 /* Animation horizontale */
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Ajuste selon le nombre d’éléments */
+  100% { transform: translateX(-50%); } 
 }
 
 /* Responsive */
@@ -499,7 +673,10 @@ li:hover .dropdown-content {
   }
 }
 
-/* ===== Contact ===== */
+/* ==========================================
+   BLOC : CONTACT
+   ========================================== */
+
 #contact {
   padding: 6rem 2rem;
   background: #f9f9f9;
@@ -639,7 +816,11 @@ li:hover .dropdown-content {
     max-width: 100%;
   }
 }
-/* ===== Footer ===== */
+
+/* ==========================================
+   BLOC : FOOTER
+   ========================================== */
+
 footer {
   background: var(--primary);
   color: #fff;
@@ -698,6 +879,44 @@ footer .footnote {
   padding-top: 1rem;
 }
 
+.footer-links {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px; 
+    line-height: 1.4;
+}
+
+.footer-links a {
+    color: #e0f2f1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Ajustement pour le mobile */
+@media (max-width: 768px) {
+    footer .footer-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        display: inline-block;
+        text-align: center;
+    }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   footer .footer-grid {
@@ -708,5 +927,4 @@ footer .footnote {
     justify-content: center;
   }
 }
-
 
