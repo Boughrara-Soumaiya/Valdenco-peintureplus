@@ -19,7 +19,7 @@ body {
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
   color: #333;
-  background: linear-gradient(135deg, #f5f7fa 0%, #dce6ee 100%);
+  background: #f3f6f9;
 }
 
 /* ==========================================
@@ -319,66 +319,10 @@ li:hover .dropdown-content {
 /* ==========================================
    BLOC : partner
    ========================================== */
-.partner {
-    padding: 60px 10%;
-    background: #ffffff; /* Blanc pur */
-}
-
-/* --- SECTION ARGUMENTAIRE --- */
-.why-partner {
-    padding: 60px 10%;
-    background: #f4f7f9; 
-    color: var(--primary);
-    text-align: center;
-    border-top: 1px solid #eee;
-    border-bottom: 5px solid var(--secondary); 
-}
-
-.why-partner h2 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    font-style: italic;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
-
-.why-partner p {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 750px;
-    margin: 0 auto 1.5rem;
-    color: #444;
-}
-
-.why-partner .btn-partner {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--primary);
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.why-partner .btn-partner:hover {
-    background: var(--secondary);
-    transform: translateY(-2px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .why-partner { padding: 60px 5%; }
-    .why-partner h2 { font-size: 1.6rem; }
-    .why-partner p { padding: 20px; font-size: 1rem; }
-}
 
 .partner {
     padding: 80px 10%;
-    background: #fdfdfd;
+    background: #f3f6f9;
     border-top: 1px solid #eee;
 }
 
@@ -464,12 +408,68 @@ li:hover .dropdown-content {
 }
 
 /* ==========================================
+   BLOC : why partner
+   ========================================== */
+/* --- SECTION ARGUMENTAIRE --- */
+.why-partner {
+    padding: 60px 10%;
+    background: white;
+    color: var(--primary);
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 5px solid var(--secondary); 
+}
+
+.why-partner h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.why-partner p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+    color: #444;
+}
+
+.why-partner .btn-partner {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.why-partner .btn-partner:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .why-partner { padding: 60px 5%; }
+    .why-partner h2 { font-size: 1.6rem; }
+    .why-partner p { padding: 20px; font-size: 1rem; }
+}
+
+
+/* ==========================================
    BLOC : CONTACT
    ========================================== */
 
 #contact {
   padding: 6rem 2rem;
-  background: #f9f9f9;
+  background: #f3f6f9;
   font-family: 'Inter', sans-serif;
 }
 
@@ -480,7 +480,6 @@ li:hover .dropdown-content {
 }
 
 #contact .section-head h2 {
-  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
