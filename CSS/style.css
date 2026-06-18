@@ -479,6 +479,7 @@ li:hover .dropdown-content {
   justify-content: center;
   gap: clamp(20px, 5vw, 60px); 
   padding: clamp(30px, 8vw, 80px) 5%;
+  margin-bottom: 6rem;
   max-width: 1300px;
   margin: 0 auto;
   background-color: #FFFFFF;
