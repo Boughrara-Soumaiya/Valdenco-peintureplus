@@ -16,7 +16,7 @@
     </a>
     <!-- Logo Mobile -->
     <a href="index.html" class="logo-link">
-      <img src="logo/logomark_1.png" alt="Logo Mobile" class="logo-mobile">
+      <img src="logo/logo_horizontale_1.png" alt="Logo Mobile" class="logo-mobile">
     </a>
     <!-- Burger -->
     <div class="burger" id="burger">
@@ -28,13 +28,13 @@
         <li>
           <a href="#">Services ▾</a>
           <div class="dropdown-content">
-            <a href="Entreprise.html">Entreprise</a>
-            <a href="Marchepublic.html">Marché public</a>
-            <a href="particulier.html">Particulier</a>
+            <a href="Entreprise.html">Service 1</a>
+            <a href="Marchepublic.html">Service 2</a>
+            <a href="particulier.html">Service 3</a>
+            <a href="particulier.html">Service 4</a>
           </div>
         </li>
         <li><a href="nostravaux.html">Nos travaux</a></li>
-        <li><a href="partenaire.html">Partenaires</a></li>
         <li><a href="#contact" class="btn-devis">Obtenir un devis</a></li>
       </ul>
     </nav>
@@ -289,6 +289,15 @@
         </select>
       </div>
 
+      <div>
+        <label for="sujet">Vous êtes </label>
+        <select id="sujet" name="sujet" required>
+          <option value="">Choisir…</option>
+          <option value="Devis">Professionel</option>
+          <option value="Information">Particulier</option>
+        </select>
+      </div>
+
       <div class="full">
         <label for="message">Votre message</label>
         <textarea id="message" name="message" required placeholder="Détaillez votre projet (surface, type de locaux, délais souhaités...)"></textarea>
@@ -377,35 +386,27 @@ form.addEventListener('submit', function(e) {
 
 <!-- Footer -->
 <footer>
-  <div class="container footer-grid">
+  <div class="footer-grid">
     <div>
       <div class="brand" style="margin: 12px 0 6px;">
         <span class="logo" aria-hidden="true"></span>
-        <span>ValdenCo – Peinture Plus</span>
+        <h4>ValdenCo – Peinture Plus</h4>
       </div>
       <p class="small">Protection de surface industrielle, résines de sol, anticorrosion, marquage et solutions de préparation.</p>
     </div>
-    <div>
-      <p class="small">
-        <h4>Coordonnées</h4>
-        <p><strong>ValdenCo Peinture Plus</strong></p>
-        <address style="font-style: normal; margin-bottom: 20px;">
-            8 Rue de la Forêt<br>
-            57660 Maxstadt
-        </address>
-        <p><strong>Téléphone :</strong> 06 98 79 10 23</p>
-        <p><strong>Email :</strong> peintureplus@ymail.com</p>
-      </p>
+
+    <div class="footer-coordonnees">
+      <h4>Coordonnées</h4>
+      <p><strong>ValdenCo Peinture Plus</strong></p>
+      <address style="font-style: normal; margin-bottom: 20px;">
+          8 Rue de la Forêt<br>
+          57660 Maxstadt
+      </address>
+      <p><strong>Téléphone Secrétariat:</strong> 06 98 79 10 23</p>
+      <p><strong>Téléphone Direction:</strong> 06 00 00 00 00</p>
+      <p><strong>Email :</strong> peintureplus@ymail.com</p>
     </div>
-    <div>
-      <h4>Navigation</h4>
-      <p class="small">
-        <a href="index.html#services">Services</a>
-        <br><a href="index.html#realisations">Réalisations</a>
-        <br><a href="#partenaires">Partenaires</a>
-        <br><a href="#contact">Contact</a>
-      </p>
-    </div>
+
     <div>
       <h4>Juridique</h4>
       <ul class="footer-links">
@@ -415,16 +416,19 @@ form.addEventListener('submit', function(e) {
         <li><a href="cgv.html">Conditions Générales de Vente</a></li>
       </ul>
     </div>
+
     <div> 
       <h4>Réseaux</h4>
-      <p class="small">
-        <a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a><br>
-        <a href="#">Facebook</a>
-      </p>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/company/valdenco-peinture-plus/">LinkedIn</a></li>
+      </ul>
     </div>
+
   </div>
-  <div class="container footnote">
-    © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
+
+  <div class="footnote">
+    © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
   </div>
 </footer>
+</style>
 </html>

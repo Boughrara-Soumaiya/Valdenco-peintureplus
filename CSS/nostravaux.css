@@ -657,7 +657,6 @@ li:hover .dropdown-content {
 /* ==========================================
    BLOC : FOOTER
    ========================================== */
-
 footer {
   background: var(--primary);
   color: #fff;
@@ -676,36 +675,37 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Structure de la Grille principale */
 footer .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr; 
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
 }
 
 footer .brand {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-footer .brand svg {
-  width: 32px;
-  height: 32px;
 }
 
 footer h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+footer p, footer address {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 0.5rem 0;
 }
 
 footer p.small {
   font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
+  opacity: 0.9;
 }
 
 footer .footnote {
@@ -714,17 +714,34 @@ footer .footnote {
   color: #cfd8dc;
   border-top: 1px solid rgba(255,255,255,0.2);
   padding-top: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ===== Responsive ===== */
+.footer-links {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px; 
+}
+
+/* ===== RESPONSIVE PARFAIT ===== */
+
+/* Mobiles */
 @media (max-width: 768px) {
   footer .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Tout sur une colonne */
     text-align: center;
   }
+  
+  .footer-coordonnees {
+    grid-column: span 1;
+  }
+
   footer .brand {
     justify-content: center;
   }
 }
-
-
