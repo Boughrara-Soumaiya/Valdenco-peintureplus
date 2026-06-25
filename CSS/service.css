@@ -417,8 +417,7 @@ li:hover .dropdown-content {
 .services-intro h2 {
     text-align: left;
     color: var(--primary);
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 20px; 
     font-style: italic;
     text-transform: uppercase;
     line-height: 1.2;

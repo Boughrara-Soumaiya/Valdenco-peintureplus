@@ -716,6 +716,9 @@ li:hover .dropdown-content {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .circle h3 {
+  font-size: 12px; 
+  }
   .circle {
     width: 220px;
     height: 220px;
