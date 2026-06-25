@@ -28,10 +28,10 @@
         <li>
           <a href="#">Services ▾</a>
           <div class="dropdown-content">
-            <a href="Entreprise.html">Service 1</a>
-            <a href="Marchepublic.html">Service 2</a>
-            <a href="particulier.html">Service 3</a>
-            <a href="particulier.html">Service 4</a>
+            <a href="service1.html">Résine industrielle</a>
+            <a href="service2.html">Anticorrision & Ouvrages métalliques</a>
+            <a href="service3.html">Marquage au sol</a>
+            <a href="service4.html">Peinture bâtiment</a>
           </div>
         </li>
         <li><a href="nostravaux.html">Nos travaux</a></li>
@@ -79,17 +79,17 @@
             <h2>1. Présentation de la société</h2>
             <div class="legal-card">
                 <p><strong>Dénomination sociale :</strong> ValdenCo – Peinture Plus</p>
-                <p><strong>Forme juridique :</strong> [A REMPLIR : ex: SASU / EURL]</p>
+                <p><strong>Forme juridique :</strong> SARL</p>
                 <p><strong>Siège social :</strong> 8 Rue de la Forêt, 57660 Maxstadt, France</p>
-                <p><strong>SIRET :</strong> [NUM_SIRET_ICI]</p>
-                <p><strong>TVA Intracommunautaire :</strong> [TON_NUMERO_TVA]</p>
+                <p><strong>SIRET :</strong> 49869063500038</p>
+                <p><strong>TVA Intracommunautaire :</strong> N° FR80498690635</p>
             </div>
         </section>
 
         <section class="legal-section">
             <h2>2. Direction et Contact</h2>
             <div class="legal-card">
-                <p><strong>Directeur de la publication :</strong> [NOM_ICI]</p>
+                <p><strong>Directeur de la publication :</strong> Fouad BENKHEDIMALLAH</p>
                 <p><strong>Contact :</strong> Pour toute demande, écrivez à <strong>peintureplus@ymail.com</strong> ou utilisez notre formulaire de contact.</p>
             </div>
         </section>
@@ -214,7 +214,7 @@
           57660 Maxstadt
       </address>
       <p><strong>Téléphone Secrétariat:</strong> 06 98 79 10 23</p>
-      <p><strong>Téléphone Direction:</strong> 06 00 00 00 00</p>
+      <p><strong>Téléphone Direction:</strong> 07 82 95 19 66</p>
       <p><strong>Email :</strong> peintureplus@ymail.com</p>
     </div>
 
@@ -241,5 +241,95 @@
     © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
   </div>
 </footer>
+<style>
+    footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+footer a {
+  color: #e0f2f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Structure de la Grille principale */
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr; 
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+footer .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+footer h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+footer p, footer address {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 0.5rem 0;
+}
+
+footer p.small {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+footer .footnote {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #cfd8dc;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px; 
+}
+
+/* ===== RESPONSIVE PARFAIT ===== */
+
+/* Mobiles */
+@media (max-width: 768px) {
+  footer .footer-grid {
+    grid-template-columns: 1fr; /* Tout sur une colonne */
+    text-align: center;
+  }
+  
+  .footer-coordonnees {
+    grid-column: span 1;
+  }
+
+  footer .brand {
+    justify-content: center;
+  }
+}
+
 </style>
 </html>

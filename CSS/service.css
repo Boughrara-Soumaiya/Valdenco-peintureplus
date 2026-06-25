@@ -606,6 +606,162 @@ li:hover .dropdown-content {
         height: 40px;
     }
 }
+
+/* ==========================================
+   BLOC : CLIENTS & MÉTHODES (HARMONISÉ)
+   ========================================== */
+
+#types-clients, 
+#methode-utilisee {
+  padding: 60px 5%;
+  background: white;
+}
+
+/* On alterne les fonds comme le reste de la page */
+#methode-utilisee {
+  background: #f3f6f9;
+}
+
+/* Titres alignés sur le style de la section "Services" */
+#types-clients h2,
+#methode-utilisee h2 {
+  text-align: left;
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  border-left: 5px solid var(--secondary);
+  padding-left: 15px;
+}
+
+/* --- SECTION CLIENTS (GRID SYNCHRONISÉE) --- */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.client-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-left: 4px solid var(--primary); /* Rappel du style "Pourquoi nous choisir" */
+  border-radius: 0; /* Strict & industriel */
+  transition: all 0.3s ease;
+}
+
+.client-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: white;
+}
+
+.client-card h3 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.client-card p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* --- SECTION MÉTHODE (TIMELINE INDUSTRIELLE) --- */
+.method-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.method-step {
+  background: white;
+  border: 1px solid #ddd;
+  border-left: 4px solid var(--secondary); /* Accentuation de l'étape */
+  border-radius: 0;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-left-color: var(--primary);
+}
+
+.method-step-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.method-step p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.method-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.method-details li {
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 15px;
+  color: #333;
+}
+
+/* Puce carrée personnalisée pour le côté technique */
+.method-details li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+}
+
+.method-details li strong {
+  color: var(--primary);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  #types-clients, 
+  #methode-utilisee {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+  
+  #types-clients h2,
+  #methode-utilisee h2 {
+    font-size: 1.4rem;
+  }
+}
+
 /* ==========================================
    BLOC : PARTNERS
    ========================================== */

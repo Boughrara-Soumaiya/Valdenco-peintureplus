@@ -27,11 +27,11 @@
      <ul>
         <li>
           <a href="#">Services ▾</a>
-          <div class="dropdown-content">
-            <a href="Entreprise.html">Service 1</a>
-            <a href="Marchepublic.html">Service 2</a>
-            <a href="particulier.html">Service 3</a>
-            <a href="particulier.html">Service 4</a>
+            <div class="dropdown-content">
+            <a href="service1.html">Résine industrielle</a>
+            <a href="service2.html">Anticorrision & Ouvrages métalliques</a>
+            <a href="service3.html">Marquage au sol</a>
+            <a href="service4.html">Peinture bâtiment</a>
           </div>
         </li>
         <li><a href="nostravaux.html">Nos travaux</a></li>
@@ -254,6 +254,16 @@
                 </div>
             </details>
 
+             <details class="faq-item">
+                <summary>Travaillez-vous sur les marchés publics et appels d’offres ?</summary>
+                <div class="faq-content">
+                    <p>Oui, nous répondons régulièrement à des appels d'offres publics (collectivités, gestionnaires
+de réseaux, syndicats d'électricité) pour nos activités. Nous maîtrisons les exigences propres
+aux marchés publics (BPU, CCTP, mémoires techniques) et savons nous adapter aux
+contraintes spécifiques de chaque cahier des charges.</p>
+                </div>
+            </details>
+
             <details class="faq-item">
                 <summary>Utilisez-vous des produits certifiés ?</summary>
                 <div class="faq-content">
@@ -273,6 +283,17 @@
             </details>
 
             <details class="faq-item">
+                <summary>Comment traiter vous les déchets ?</summary>
+                <div class="faq-content">
+                    <p>Nous appliquons une gestion rigoureuse des déchets de chantier, en particulier pour les
+déchets dangereux issus du décapage, ou sablage (résidus de peinture, poussières
+métalliques, solvants). Ces déchets sont collectés, triés et évacués via des filières agréées,
+avec émission d'un BSDD (Bordereau de Suivi des Déchets Dangereux) garantissant la
+traçabilité complète, de l'enlèvement jusqu'au traitement final.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
                 <summary>Quels sont les délais pour obtenir un devis ?</summary>
                 <div class="faq-content">
                     <p>Nous nous engageons à traiter vos demandes de contact sous 24h. Après analyse technique de votre projet ou visite sur site, un devis détaillé vous est transmis sous 48h à 72h ouvrées.</p>
@@ -287,6 +308,17 @@
                 <summary>Comment assurez-vous la sécurité des travailleurs sur site ?</summary>
                 <div class="faq-content">
                     <p>ValdenCo applique une politique "Zéro Accident". Avant chaque chantier, un Plan de Prévention est établi. Nos équipes sont équipées d'EPI conformes et sont formées au balisage et à la sécurisation des zones d'intervention.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Êtes-vous assurés pour vos interventions ?</summary>
+                <div class="faq-content">
+                    <p>Oui, ValdenCo Peinture Plus dispose des assurances nécessaires à l'exercice de notre activité
+: une garantie décennale couvrant les travaux concernés, ainsi qu'une assurance
+responsabilité civile professionnelle couvrant l'ensemble de nos interventions. Les
+attestations sont disponibles sur simple demande, notamment dans le cadre des appels
+d'offres</p>
                 </div>
             </details>
 
@@ -348,7 +380,7 @@
           57660 Maxstadt
       </address>
       <p><strong>Téléphone Secrétariat:</strong> 06 98 79 10 23</p>
-      <p><strong>Téléphone Direction:</strong> 06 00 00 00 00</p>
+      <p><strong>Téléphone Direction:</strong> 07 82 95 19 66</p>
       <p><strong>Email :</strong> peintureplus@ymail.com</p>
     </div>
 
@@ -375,4 +407,95 @@
     © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
   </div>
 </footer>
+<style>
+    footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+footer a {
+  color: #e0f2f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Structure de la Grille principale */
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr; 
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+footer .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+footer h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+footer p, footer address {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 0.5rem 0;
+}
+
+footer p.small {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+footer .footnote {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #cfd8dc;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px; 
+}
+
+/* ===== RESPONSIVE PARFAIT ===== */
+
+/* Mobiles */
+@media (max-width: 768px) {
+  footer .footer-grid {
+    grid-template-columns: 1fr; /* Tout sur une colonne */
+    text-align: center;
+  }
+  
+  .footer-coordonnees {
+    grid-column: span 1;
+  }
+
+  footer .brand {
+    justify-content: center;
+  }
+}
+
+</style>
 </html>

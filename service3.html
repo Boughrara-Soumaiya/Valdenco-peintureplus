@@ -28,10 +28,10 @@
         <li>
           <a href="#">Services ▾</a>
           <div class="dropdown-content">
-            <a href="Entreprise.html">Service 1</a>
-            <a href="Marchepublic.html">Service 2</a>
-            <a href="particulier.html">Service 3</a>
-            <a href="particulier.html">Service 4</a>
+            <a href="service1.html">Résine industrielle</a>
+            <a href="service2.html">Anticorrision & Ouvrages métalliques</a>
+            <a href="service3.html">Marquage au sol</a>
+            <a href="service4.html">Peinture bâtiment</a>
           </div>
         </li>
         <li><a href="nostravaux.html">Nos travaux</a></li>
@@ -50,6 +50,7 @@
     nav.classList.toggle('active');
   });
   </script>
+
   <!-- Script Google Translate -->
   <script type="text/javascript">
   function googleTranslateElementInit() {
@@ -69,53 +70,47 @@
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
   </script>
 
-  <!-- == HOME == -->
+  <!-- == HOME ==-->
   <section class="home">
-    <h1>Entreprise </h1>
-    <p>Nous accompagnons les entreprises pour la rénovation et l'embellissement de leurs locux professionnels.</p>
+    <h1>Marquage au sol</h1>
+    <p>Un marquage clair pour circuler en sécurité</p>
   </section>
 
 
-  <!-- == Pourquoi nous choisir ==  -->
+ <!-- Section 1 : Pourquoi nous choisir -->
   <section id="pourquoi-nous-choisir">
     <div class="container">
       <h2>Pourquoi nous choisir ?</h2>
       <ul>
-        <li>Respect strict des délais</li>
-        <li>Équipe formée aux normes professionnelles</li>
-        <li>Produits durables et de qualité</li>
-        <li>Devis rapide et personnalisé</li>
-        <li>Habilitations techniques et respect des normes de sécurité</li>
-        <li>Intervention sur sites occupés sans interruption d'activité</li>
+        <li>Sécurité renforcée pour piétons et véhicules</li>
+        <li>peinture résistante au trafic intensif et aux intempéries</li>
+        <li>intervention rapide sans perturber l'activité</li>
+        <li>conformité aux normes de signalisation</li>
+        <li>personnalisation selon vos besoins</li>
       </ul>
     </div>
   </section>
 
-  <!-- == Nos services == -->
+  <!-- Section 2 : Nos services -->
   <section id="services">
     <div class="container services-wrapper">
       <div class="services-intro">
-        <h2>Les services que nous vous proposons</h2>
-      </div>
-    
-      <div class="services-grid">
+      <h2>Les services que nous vous proposons</h2>
+    </div>
+       <div class="services-grid">
         <div class="service-card">
-          <h3>Peinture de bureaux</h3>
-          <p>Optimisez vos espaces professionnels avec des peintures adaptées et durables.</p>
+          <h3>Parkings et places de stationnemen</h3>
+          <p>Descriptif</p>
         </div>
         <div class="service-card">
-          <h3>Façades et extérieurs</h3>
-          <p>Nous rénovons vos façades pour un rendu esthétique et résistant aux intempéries.</p>
+          <h3>zone de circulation et zones de sécurité</h3>
+          <p>Descriptif</p>
         </div>
         <div class="service-card">
-          <h3>Espaces commerciaux</h3>
-          <p>Transformez vos boutiques ou showrooms avec des finitions modernes et attractives.</p>
+          <h3>zones de stockage et flux de production</h3>
+          <p>Descriptif</p>
         </div>
-        <div class="service-card">
-          <h3>Aménagements spéciaux</h3>
-          <p>Peinture décorative, signalétique ou effets spéciaux pour vos espaces professionnels.</p>
-        </div>
-        <!-- Rajouter un service ici-->
+         <!-- Rajouter un service ici-->
         <!--
         <div class="service-card">
           <h3>Titre</h3>
@@ -126,31 +121,24 @@
     </div>
   </section>
 
-  <!-- Travaux réalisés -->
+  <!-- Section 3 : Travaux réalisés -->
   <section id="travaux">
     <div class="container">
       <h2>Travaux Réalisés</h2>
       <br>
       <div class="travaux-grid">
         <div class="travail-card">
-          <h4>Bureaux - Avant/Après</h4>
+          <h4>Tapis de pierre - Avant/Après</h4>
           <div class="travail-images">
-            <img src="img/Travaux_avant.png" alt="Avant">
-            <img src="img/TRAVAUX_APRES.png" alt="Après">
+            <img src="img/Tapisdepierre_avant.png" alt="Avant">
+            <img src="img/Tapisdepierre_apres.png" alt="Après">
           </div>
         </div>
         <div class="travail-card">
-          <h4>Façade Commerce - Avant/Après</h4>
+          <h4>Travaux de Bâtiment - Avant/Après</h4>
           <div class="travail-images">
-            <img src="img/travaux2_avant.png" alt="Façade avant">
-            <img src="img/travaux2_apres.png" alt="Façade après">
-          </div>
-        </div>
-        <div class="travail-card">
-          <h4>Sol - Avant/Après</h4>
-          <div class="travail-images">
-            <img src="img/avant.png" alt="Avant">
-            <img src="img/apres.png" alt="Après">
+            <img src="img/5_autre_vue_avant.png" alt="Avant">
+            <img src="img/5_autre_vue.png" alt="Après">
           </div>
         </div>
         <!-- Ajouter d'autres travaux ici -->
@@ -171,7 +159,6 @@
    <!-- JS pour la section travaux-->
   <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // CORRECTION : On cible les éléments RÉELS du HTML ci-dessus
     const works = Array.from(document.querySelectorAll('.travail-card'));
     const paginationContainer = document.getElementById('pagination');
     
@@ -182,12 +169,11 @@
       const startIndex = (currentPage - 1) * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
 
-      // On cache tout, puis on affiche la tranche sélectionnée
       works.forEach((work, index) => {
         if (index >= startIndex && index < endIndex) {
-          work.style.display = 'block'; // Affiche
+          work.style.display = 'block'; 
         } else {
-          work.style.display = 'none';  // Cache
+          work.style.display = 'none';  
         }
       });
 
@@ -209,7 +195,6 @@
         btn.addEventListener('click', () => {
           currentPage = i;
           updateDisplay();
-          // Remonte doucement vers le titre de la section
           document.getElementById('travaux').scrollIntoView({ behavior: 'smooth' });
         });
         
@@ -221,6 +206,70 @@
   });
   </script>
 
+  <section id="types-clients">
+    <h2>Types de Clients</h2>
+    <div class="clients-grid">
+        <div class="client-card">
+            <h3>Entreprises Logistiques & Industrielles</h3>
+            <p>descriptif</p>
+        </div>
+        <div class="client-card">
+            <h3>Collectivités</h3>
+            <p>descriptif</p>
+        </div>
+        <div class="client-card">
+            <h3>Gestionnaires de parkings & Centres commerciaux</h3>
+            <p>descriptif</p>
+        </div>
+    </div>
+</section>
+
+<section id="methode-utilisee">
+    <h2>Méthode Utilisée</h2>
+    <div class="method-timeline">
+        
+        <div class="method-step">
+            <div class="method-step-title">Nettoyage et préparation de la surface</div>
+            <p>Intervention essentielle pour garantir la tenue du marquage dans le temps :</p>
+            <ul class="method-details">
+                <li>Dégraissage complet pour éliminer les traces d'hydrocarbures ou d'huiles.</li>
+                <li>Dépoussiérage mécanique ou par aspiration industrielle pour une netteté absolue du support.</li>
+            </ul>
+        </div>
+
+        <div class="method-step">
+            <div class="method-step-title">Traçage et implantation des repères</div>
+            <p>Préparatifs géométriques rigoureux avant peinture :</p>
+            <ul class="method-details">
+                <li>Implantation précise des repères au sol conformément aux plans d'architecte ou à la réglementation en vigueur.</li>
+            </ul>
+        </div>
+
+        <div class="method-step">
+            <div class="method-step-title">Application de la peinture</div>
+            <p>Mise en œuvre technique avec du matériel professionnel :</p>
+            <ul class="method-details">
+                <li>Application de la peinture (rouleau, machine airless ou traceuse de lignes) en une ou deux couches selon l'intensité du trafic prévu et le support.</li>
+            </ul>
+        </div>
+
+        <div class="method-step">
+            <div class="method-step-title">Séchage et contrôle de l'adhérence</div>
+            <p>Vérifications techniques de fin de chantier :</p>
+            <ul class="method-details">
+                <li>Respect strict du temps de polymérisation et de séchage de la peinture.</li>
+                <li>Contrôle de l'adhérence sur le support et de la netteté géométrique des lignes appliquées.</li>
+            </ul>
+        </div>
+
+        <div class="method-step">
+            <div class="method-step-title">Remise en circulation</div>
+            <p>Réouverture définitive de la zone après validation du délai de séchage à cœur, minimisant ainsi l'impact sur votre exploitation courante.</p>
+        </div>
+
+    </div>
+</section>
+
   <!-- ===== Partenaires ===== -->
   <section id="partners" class="partners-section">
     <div class="partners-head">
@@ -228,6 +277,9 @@
       <p>Nous collaborons avec des acteurs de confiance pour garantir la qualité de nos services.</p>
     </div>
     <!-- Carousel avec tout les logo-->
+    <div class="partners-carousel">
+      <div class="carousel-track">
+   <!-- Carousel avec tout les logo-->
     <div class="partners-carousel">
       <div class="carousel-track">
       <div class="partner"><img src="Partenaire/Logo_Vinci.png" alt="Logo Vinci"></div>
@@ -262,6 +314,7 @@
     </div>
   </section>
 </body>
+
 <!-- Contact -->
 <section id="contact" class="container">
   <div class="section-head">
@@ -300,7 +353,7 @@
         </select>
       </div>
 
-       <div>
+      <div>
         <label for="sujet">Vous êtes </label>
         <select id="sujet" name="sujet" required>
           <option value="">Choisir…</option>
@@ -394,6 +447,7 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 </main>
+
 <!-- Footer -->
 <footer>
   <div class="footer-grid">
@@ -413,7 +467,7 @@ form.addEventListener('submit', function(e) {
           57660 Maxstadt
       </address>
       <p><strong>Téléphone Secrétariat:</strong> 06 98 79 10 23</p>
-      <p><strong>Téléphone Direction:</strong> 06 00 00 00 00</p>
+      <p><strong>Téléphone Direction:</strong> 07 82 95 19 66</p>
       <p><strong>Email :</strong> peintureplus@ymail.com</p>
     </div>
 
@@ -440,5 +494,4 @@ form.addEventListener('submit', function(e) {
     © <span id="year"></span> ValdenCo – Peinture Plus. Tous droits réservés.
   </div>
 </footer>
-
 </html>
